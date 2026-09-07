@@ -1,0 +1,127 @@
+[build]
+  # Static site — plain HTML/CSS/JS, no build step required.
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# ---------------------------------------------------------------------------
+# Redirects from the old multi-page Astro site's routes to the new
+# single-page layout, so any existing bookmarks, backlinks, or search
+# results don't just 404.
+# ---------------------------------------------------------------------------
+
+[[redirects]]
+  from = "/dental-cosmetic/*"
+  to = "/#dental"
+  status = 301
+
+[[redirects]]
+  from = "/luxury-realtors/*"
+  to = "/#realestate"
+  status = 301
+
+[[redirects]]
+  from = "/luxury-real-estate"
+  to = "/#realestate"
+  status = 301
+
+[[redirects]]
+  from = "/campaigns/*"
+  to = "/#pricing"
+  status = 301
+
+[[redirects]]
+  from = "/smes/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/sme-lead-nurture"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/ecommerce-conversion/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/free-lead-nurture-kit/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/kit"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/starter-kit"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/business-guide/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/starting-your-business-properly/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/small-business-money-handbook/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/about/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/contact/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/book-a-call/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/book-call"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/whatsapp/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+# Old directory-style legal page URLs -> new flat .html files
+[[redirects]]
+  from = "/privacy/*"
+  to = "/privacy.html"
+  status = 301
+
+[[redirects]]
+  from = "/terms/*"
+  to = "/terms.html"
+  status = 301

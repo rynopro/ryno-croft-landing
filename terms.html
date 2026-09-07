@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms | Ryno Croft Digital Studio</title>
+<meta name="description" content="Terms of use for the Ryno Croft Digital Studio website.">
+<meta name="robots" content="noindex">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { cream: '#FDFBF7', navy: '#0A1128', gold: '#C5A059', slate: '#1F2937', charcoal: '#0F172A' },
+        fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['"Inter"', 'sans-serif'] },
+      },
+    },
+  };
+</script>
+<style>
+  html { font-family: 'Inter', sans-serif; }
+  .font-serif { font-family: 'Playfair Display', serif; }
+  body { background-color: #FDFBF7; color: #1F2937; }
+  .legal-content h2 { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 600; color: #0F172A; margin-top: 2.25rem; margin-bottom: 0.75rem; }
+  .legal-content p, .legal-content li { line-height: 1.75; margin-bottom: 1rem; }
+  .legal-content ul { list-style: disc; padding-left: 1.5rem; }
+  .legal-content a { color: #C5A059; text-decoration: underline; }
+</style>
+</head>
+<body class="bg-cream text-slate antialiased">
+
+  <header class="border-b border-navy/10">
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+      <a href="/" class="font-serif text-lg tracking-wide text-charcoal font-semibold">
+        RYNO CROFT <span class="text-gold">DIGITAL STUDIO</span>
+      </a>
+      <a href="/" class="text-sm font-medium text-slate hover:text-gold transition-colors">&larr; Back to Home</a>
+    </div>
+  </header>
+
+  <section class="py-16 px-5 sm:px-8">
+    <div class="max-w-3xl mx-auto">
+      <p class="eyebrow text-gold font-semibold text-xs uppercase tracking-widest mb-3">Terms</p>
+      <h1 class="font-serif text-3xl sm:text-4xl font-semibold text-charcoal mb-2">Terms of use.</h1>
+      <p class="text-sm text-slate/60 mb-10">Last updated: September 2026</p>
+
+      <div class="legal-content">
+        <h2>About this website</h2>
+        <p>This website belongs to Ryno Croft Digital Studio and describes the lead follow-up and conversion systems we build for dental &amp; cosmetic practices and luxury real estate businesses. Content on this site &mdash; including package descriptions and pricing &mdash; is provided for general informational purposes.</p>
+
+        <h2>Booking a call</h2>
+        <p>Calls are scheduled through Cal.com. Booking a call does not create any contractual obligation on either side &mdash; it's a conversation to determine whether our services are a good fit for your business.</p>
+
+        <h2>Pricing</h2>
+        <p>Prices listed on this site reflect starting investment for each package. Final scope and pricing are confirmed directly with you after a strategy audit call, based on your specific requirements.</p>
+
+        <h2>No guarantees</h2>
+        <p>While we bring genuine expertise and care to every system we build, we can't guarantee specific business outcomes (such as bookings, listings, or revenue) from any follow-up system, sequence, or campaign referenced on this site.</p>
+
+        <h2>Changes</h2>
+        <p>We may update these terms from time to time as the business and its services evolve. The most current version will always be available at this page.</p>
+
+        <h2>Contact</h2>
+        <p>Questions about these terms can be sent to <a href="mailto:hello@rynocroft.com">hello@rynocroft.com</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 px-5 sm:px-8 border-t border-navy/10">
+    <div class="max-w-4xl mx-auto text-sm text-slate/60 text-center">
+      &copy; <span id="year"></span> Ryno Croft Digital Studio. All rights reserved.
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
