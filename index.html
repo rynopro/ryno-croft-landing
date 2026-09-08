@@ -38,11 +38,6 @@
   .font-serif { font-family: 'Playfair Display', serif; }
   body { background-color: #FDFBF7; color: #1F2937; }
 
-  /* Modal fade/scale transition */
-  #calModal { transition: opacity 0.25s ease; }
-  #calModal.hidden { display: none; }
-  #calModalPanel { transition: transform 0.25s ease, opacity 0.25s ease; }
-
   /* Mobile nav slide */
   #mobileMenu { transition: max-height 0.3s ease; }
 
@@ -310,38 +305,15 @@
     </div>
   </footer>
 
-  <!-- ============ CAL.COM MODAL ============ -->
-  <div id="calModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8">
-    <div id="calModalOverlay" class="absolute inset-0 bg-charcoal/70 backdrop-blur-sm"></div>
-    <div id="calModalPanel" class="relative bg-white w-full max-w-3xl h-[85vh] sm:h-[80vh] rounded-2xl shadow-2xl overflow-hidden flex flex-col">
-      <div class="flex items-center justify-between px-6 py-4 border-b border-navy/10">
-        <h3 class="font-serif text-lg font-semibold text-charcoal">Schedule Your Strategy Audit</h3>
-        <button id="closeModalBtn" aria-label="Close" class="text-slate hover:text-charcoal text-2xl leading-none">&times;</button>
-      </div>
-      <!--
-        CONFIG: Replace CAL_BOOKING_URL below (in the script block near the
-        bottom of this file) with your real Cal.com link once your account
-        and event type are set up, e.g. "https://cal.com/your-username/strategy-audit".
-        "https://cal.com/rynocroft" is a placeholder and will not work until updated.
-      -->
-      <iframe
-        id="calIframe"
-        src=""
-        class="flex-1 w-full border-0"
-        title="Book a call with Ryno Croft Digital Studio"
-        loading="lazy">
-      </iframe>
-    </div>
-  </div>
-
   <!-- ============ SCRIPTS ============ -->
   <script>
     // ======================================================================
     // CONFIG — the one place to update once your Cal.com account is live.
-    // Replace with your real event booking link, e.g.:
-    //   "https://cal.com/your-username/strategy-audit"
+    // This is the part of your Cal.com URL that comes after "cal.com/",
+    // e.g. for https://cal.com/rynocroftdigitalstudio/15min, use exactly:
+    //   "rynocroftdigitalstudio/15min"
     // ======================================================================
-    const CAL_BOOKING_URL = "https://cal.com/rynocroftdigitalstudio/15min";
+    const CAL_LINK = "rynocroftdigitalstudio/15min";
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -363,32 +335,54 @@
       });
     });
 
-    // Cal.com modal
-    const calModal = document.getElementById('calModal');
-    const calModalPanel = document.getElementById('calModalPanel');
-    const calIframe = document.getElementById('calIframe');
-    const openButtons = document.querySelectorAll('[data-open-modal]');
-    const closeModalBtn = document.getElementById('closeModalBtn');
-    const calModalOverlay = document.getElementById('calModalOverlay');
+    // ======================================================================
+    // Cal.com booking popup — uses Cal.com's own official embed script.
+    // A plain <iframe> pointed at a Cal.com booking page gets silently
+    // blocked by their clickjacking protection, so every CTA button here
+    // is wired to Cal.com's own popup API instead, which is the supported,
+    // reliable way to embed a booking flow on an external site.
+    // ======================================================================
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["initNamespace", namespace]);
+          } else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
 
-    function openModal() {
-      if (!calIframe.src) {
-        calIframe.src = CAL_BOOKING_URL;
-      }
-      calModal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
+    Cal("init", { origin: "https://cal.com" });
+    Cal("ui", {
+      theme: "light",
+      styles: { branding: { brandColor: "#0A1128" } },
+      hideEventTypeDetails: false,
+      layout: "month_view",
+    });
 
-    function closeModal() {
-      calModal.classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-
-    openButtons.forEach((btn) => btn.addEventListener('click', openModal));
-    closeModalBtn.addEventListener('click', closeModal);
-    calModalOverlay.addEventListener('click', closeModal);
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !calModal.classList.contains('hidden')) closeModal();
+    // Every button that used to open our custom modal now opens Cal.com's
+    // official popup instead — same buttons, same click behaviour for
+    // visitors, just pointed at a mechanism that actually works.
+    document.querySelectorAll('[data-open-modal]').forEach((el) => {
+      el.setAttribute('data-cal-link', CAL_LINK);
+      el.setAttribute('data-cal-config', '{"layout":"month_view"}');
     });
   </script>
 
