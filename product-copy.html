@@ -277,9 +277,9 @@
           <li class="flex gap-2"><span class="text-gold">&#10003;</span>Consistent brand voice</li>
           <li class="flex gap-2"><span class="text-gold">&#10003;</span>1 revision round</li>
         </ul>
-        <button data-open-modal class="w-full text-center border border-navy text-charcoal font-semibold px-6 py-3 rounded-full hover:bg-navy hover:text-cream transition-colors">
+        <a href="#" data-tally-link="sprint" target="_blank" rel="noopener noreferrer" class="w-full text-center border border-navy text-charcoal font-semibold px-6 py-3 rounded-full hover:bg-navy hover:text-cream transition-colors">
           Start My 10-Product Sprint
-        </button>
+        </a>
       </div>
 
       <!-- Package 2 (Most Popular) -->
@@ -300,9 +300,9 @@
           <li class="flex gap-2"><span class="text-gold">&#10003;</span>Title/meta recommendations</li>
           <li class="flex gap-2"><span class="text-gold">&#10003;</span>2 revision rounds</li>
         </ul>
-        <button data-open-modal class="w-full text-center bg-gold text-navy font-semibold px-6 py-3 rounded-full hover:bg-cream transition-colors">
+        <a href="#" data-tally-link="overhaul" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-gold text-navy font-semibold px-6 py-3 rounded-full hover:bg-cream transition-colors">
           Improve 20 Product Pages
-        </button>
+        </a>
       </div>
 
       <!-- Package 3 -->
@@ -439,6 +439,24 @@
     // doesn't exist.
     // ======================================================================
     const CAL_LINK = "rynocroftdigitalstudio/15min";
+
+    // ======================================================================
+    // CONFIG — Tally form links for the two fixed-scope packages.
+    // Flow: visitor clicks the package button -> lands on your Tally form
+    // (collects their details/product URLs) -> the form itself redirects
+    // to PayPal for payment once you set that up inside Tally's own
+    // "redirect on submit" setting.
+    // Replace these two placeholder URLs with your real Tally form links
+    // once they're built — until then, these buttons won't go anywhere real.
+    // ======================================================================
+    const TALLY_LINKS = {
+      sprint: "https://tally.so/r/REPLACE_WITH_SPRINT_FORM_ID",
+      overhaul: "https://tally.so/r/REPLACE_WITH_OVERHAUL_FORM_ID",
+    };
+    document.querySelectorAll('[data-tally-link]').forEach((el) => {
+      const key = el.getAttribute('data-tally-link');
+      if (TALLY_LINKS[key]) el.setAttribute('href', TALLY_LINKS[key]);
+    });
 
     (function (C, A, L) {
       let p = function (a, ar) { a.q.push(ar); };
