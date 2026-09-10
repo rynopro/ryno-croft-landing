@@ -260,6 +260,13 @@
       <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-charcoal">Choose the level that fits your catalogue.</h2>
     </div>
 
+    <div class="max-w-2xl mx-auto text-center mb-12 bg-cream border border-navy/10 rounded-2xl px-6 py-5">
+      <p class="text-xs font-semibold uppercase tracking-wide text-gold mb-2">How it works</p>
+      <p class="text-sm text-slate leading-relaxed">
+        Complete the intake form below to lock in your project. Once submitted, you&rsquo;ll automatically receive a PayPal invoice to pay your 50% deposit and kick off the sprint. The remaining balance is only due when your final copy is delivered.
+      </p>
+    </div>
+
     <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 items-stretch">
 
       <!-- Package 1 -->
@@ -443,9 +450,11 @@
     // ======================================================================
     // CONFIG — Tally form links for the two fixed-scope packages.
     // Flow: visitor clicks the package button -> lands on your Tally form
-    // (collects their details/product URLs) -> the form itself redirects
-    // to PayPal for payment once you set that up inside Tally's own
-    // "redirect on submit" setting.
+    // (collects their details/product URLs) -> submission triggers a
+    // Zapier/Make automation that generates a PayPal Invoice for the full
+    // package amount with a 50% minimum deposit, and emails it to the
+    // client. The remaining 50% is collected on the same invoice at
+    // delivery. See the Zapier/Make blueprint doc for the automation setup.
     // Replace these two placeholder URLs with your real Tally form links
     // once they're built — until then, these buttons won't go anywhere real.
     // ======================================================================
