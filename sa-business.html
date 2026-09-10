@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>South African Small Business Guides | Ryno Croft</title>
+<meta name="description" content="Practical DIY guidebooks for South African small businesses. Start with a free business setup guide, then explore affordable R249 guides covering key areas of growing your business.">
+<link rel="canonical" href="https://rynocroft.com/sa-business">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="South African Small Business Guides | Ryno Croft">
+<meta property="og:description" content="Practical DIY guidebooks for South African small businesses. Start with a free business setup guide, then explore affordable R249 guides covering key areas of growing your business.">
+<meta property="og:url" content="https://rynocroft.com/sa-business">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#FDFBF7',
+          navy: '#0A1128',
+          gold: '#C5A059',
+          slate: '#1F2937',
+          charcoal: '#0F172A',
+        },
+        fontFamily: {
+          serif: ['"Playfair Display"', 'serif'],
+          sans: ['"Inter"', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  html { font-family: 'Inter', sans-serif; }
+  .font-serif { font-family: 'Playfair Display', serif; }
+  body { background-color: #FDFBF7; color: #1F2937; }
+  .eyebrow { letter-spacing: 0.12em; }
+  ::selection { background: #C5A059; color: #0A1128; }
+
+  /* Native accordion chevron rotation */
+  details[open] > summary .chev { transform: rotate(180deg); }
+  summary::-webkit-details-marker { display: none; }
+  summary { list-style: none; }
+
+  /* Visible keyboard focus states throughout */
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible {
+    outline: 2px solid #C5A059;
+    outline-offset: 2px;
+  }
+
+  .visually-hidden { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
+</style>
+</head>
+
+<body class="bg-cream text-slate antialiased">
+
+  <!-- ============ HEADER ============ -->
+  <header class="border-b border-navy/10 bg-cream/90 backdrop-blur sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between gap-4">
+      <a href="#top" class="font-serif text-base sm:text-xl tracking-wide text-charcoal font-semibold whitespace-nowrap">
+        RYNO CROFT <span class="text-gold">DIGITAL STUDIO</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate">
+        <a href="#top" class="hover:text-gold transition-colors">Home</a>
+        <a href="#library" class="hover:text-gold transition-colors">SME Resources</a>
+        <a href="/" class="hover:text-gold transition-colors">About Ryno Croft</a>
+      </nav>
+
+      <a href="#library" class="shrink-0 bg-navy text-cream font-semibold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-full hover:bg-charcoal transition-colors">
+        Browse the Guides
+      </a>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="top" class="pt-16 pb-20 px-5 sm:px-8 bg-cream">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="eyebrow text-gold font-semibold text-xs sm:text-sm uppercase mb-5">South African Small Business Resources</p>
+      <h1 class="font-serif text-3xl sm:text-5xl font-semibold text-charcoal leading-tight mb-6">
+        Build Your Business With Knowledge You Can Actually Use.
+      </h1>
+      <p class="text-base sm:text-lg text-slate max-w-2xl mx-auto mb-8 leading-relaxed">
+        Practical DIY guidebooks created for South African small-business owners who want clear, affordable guidance without complicated jargon or expensive consulting.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+        <a href="#free-guide" class="w-full sm:w-auto bg-navy text-cream font-semibold px-8 py-4 rounded-full hover:bg-charcoal transition-colors shadow-lg shadow-navy/10">
+          Start With the Free Guide
+        </a>
+        <a href="#library" class="w-full sm:w-auto text-center border border-navy/30 text-charcoal font-semibold px-8 py-4 rounded-full hover:border-navy transition-colors">
+          Explore the 9-Volume Library
+        </a>
+      </div>
+      <p class="text-sm text-slate/70 italic">Learn it. Apply it. Build it yourself.</p>
+    </div>
+  </section>
+
+  <!-- ============ CORE MESSAGE ============ -->
+  <section class="py-20 px-5 sm:px-8 bg-white">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-charcoal mb-2">You don&rsquo;t need to know everything about business.</h2>
+      <p class="font-serif text-xl sm:text-2xl text-gold mb-8">You just need the right information at the right time.</p>
+      <p class="text-slate leading-relaxed mb-4">Running a small business can mean figuring out websites, Google visibility, customer reviews, social media, email, marketing and much more &mdash; often without a dedicated marketing team.</p>
+      <p class="text-slate leading-relaxed mb-4">The Ryno Croft SME Resource Library breaks these areas into practical, manageable guidebooks designed specifically for South African small businesses.</p>
+      <p class="text-charcoal font-medium">The aim is simple: give business owners the knowledge to take action themselves.</p>
+    </div>
+  </section>
+
+  <!-- ============ FREE ENTRY GUIDE ============ -->
+  <section id="free-guide" class="scroll-mt-24 py-20 px-5 sm:px-8 bg-navy">
+    <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="eyebrow text-gold font-semibold text-xs uppercase mb-4">Start Here &mdash; Free</p>
+        <p class="eyebrow text-cream/50 text-xs uppercase mb-2">Volume 1</p>
+        <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-cream mb-5">South African Business Setup Guide</h2>
+        <p class="text-cream/80 leading-relaxed mb-6">A practical starting point for South African small-business owners who want to understand the fundamentals of getting their business properly established and ready to operate online.</p>
+        <ul class="text-sm text-cream/85 space-y-3">
+          <li class="flex gap-2"><span class="text-gold">&#10003;</span>No jargon, no fluff &mdash; just the fundamentals</li>
+          <li class="flex gap-2"><span class="text-gold">&#10003;</span>Written specifically for South African small businesses</li>
+          <li class="flex gap-2"><span class="text-gold">&#10003;</span>The starting point for the full resource library</li>
+        </ul>
+      </div>
+
+      <div class="bg-cream rounded-2xl p-7 sm:p-8">
+        <p class="font-serif text-lg text-charcoal mb-1">Get the Free Guide</p>
+        <p class="text-sm text-slate/70 mb-5">Tell us where to send it &mdash; no cost, no obligation.</p>
+
+        <form id="guideForm" novalidate>
+          <p class="visually-hidden">
+            <label>Don&rsquo;t fill this out if you&rsquo;re human: <input name="hpField" id="hpField" tabindex="-1" autocomplete="off"></label>
+          </p>
+          <input type="hidden" id="guideInterest" name="interest" value="volume-1">
+
+          <div class="mb-4">
+            <label for="sbName" class="block text-sm font-medium text-charcoal mb-1.5">Name</label>
+            <input type="text" id="sbName" name="name" required class="w-full border border-navy/20 rounded-lg px-4 py-2.5 text-slate focus:border-navy outline-none">
+          </div>
+          <div class="mb-5">
+            <label for="sbEmail" class="block text-sm font-medium text-charcoal mb-1.5">Email address</label>
+            <input type="email" id="sbEmail" name="email" required class="w-full border border-navy/20 rounded-lg px-4 py-2.5 text-slate focus:border-navy outline-none">
+          </div>
+
+          <p id="guideFormError" role="alert" class="text-sm text-red-600 mb-3 hidden"></p>
+
+          <button type="submit" id="guideFormSubmit" class="w-full bg-navy text-cream font-semibold px-6 py-3 rounded-full hover:bg-charcoal transition-colors">
+            Get the Free Guide
+          </button>
+          <p class="text-xs text-slate/60 mt-3 text-center">We&rsquo;ll use your details only to send this guide and let you know when new volumes are available.</p>
+        </form>
+        <div id="guideFormSuccess" class="hidden text-center">
+          <p class="font-serif text-lg text-charcoal mb-2">Thanks &mdash; you&rsquo;re on the list.</p>
+          <p class="text-sm text-slate">We&rsquo;ve got your details and will be in touch with your copy of the guide shortly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 9-VOLUME LIBRARY ============ -->
+  <section id="library" class="scroll-mt-20 py-20 px-5 sm:px-8 bg-cream">
+    <div class="max-w-3xl mx-auto text-center mb-14">
+      <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-charcoal mb-4">The Ryno Croft SME Guidebook Library</h2>
+      <p class="text-slate leading-relaxed">Nine practical volumes covering the essential building blocks of building and growing a small business online. Volume 1 is free &mdash; each volume after that is a stand-alone R249 guide, so you only need to buy what&rsquo;s useful to you right now.</p>
+    </div>
+
+    <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Volume 1 — FREE -->
+      <div class="flex flex-col bg-navy rounded-2xl p-7">
+        <p class="eyebrow text-gold text-xs uppercase mb-2">Volume 1</p>
+        <h3 class="font-serif text-lg font-semibold text-cream mb-2">South African Business Setup Guide</h3>
+        <p class="text-sm text-cream/75 leading-relaxed mb-6 flex-1">Understand the fundamentals of getting your business properly established and ready to operate online.</p>
+        <p class="font-serif text-xl font-semibold text-gold mb-4">Free</p>
+        <a href="#free-guide" class="w-full text-center bg-gold text-navy font-semibold px-5 py-2.5 rounded-full hover:bg-cream transition-colors text-sm">
+          Get the Free Guide
+        </a>
+      </div>
+
+      <!-- Volume 2 -->
+      <div class="flex flex-col bg-white border border-navy/10 rounded-2xl p-7">
+        <p class="eyebrow text-slate/50 text-xs uppercase mb-2">Volume 2</p>
+        <h3 class="font-serif text-lg font-semibold text-charcoal mb-2">Starting Your South African Business Properly</h3>
+        <p class="text-sm text-slate leading-relaxed mb-6 flex-1">CIPC and SARS registration, banking, tax, contracts and a launch-week checklist.</p>
+        <p class="font-serif text-xl font-semibold text-charcoal mb-1">R249</p>
+        <p class="text-xs text-gold font-semibold uppercase mb-4">Coming Soon</p>
+        <a href="#free-guide" data-interest="volume-2" class="notify-link w-full text-center border border-navy/30 text-charcoal font-semibold px-5 py-2.5 rounded-full hover:border-navy transition-colors text-sm">
+          Notify Me When Available
+        </a>
+      </div>
+
+      <!-- Volume 3 -->
+      <div class="flex flex-col bg-white border border-navy/10 rounded-2xl p-7">
+        <p class="eyebrow text-slate/50 text-xs uppercase mb-2">Volume 3</p>
+        <h3 class="font-serif text-lg font-semibold text-charcoal mb-2">The Small Business Money Handbook</h3>
+        <p class="text-sm text-slate leading-relaxed mb-6 flex-1">Financial statements, real pricing models, cash flow, budgeting, debt and funding.</p>
+        <p class="font-serif text-xl font-semibold text-charcoal mb-1">R249</p>
+        <p class="text-xs text-gold font-semibold uppercase mb-4">Coming Soon</p>
+        <a href="#free-guide" data-interest="volume-3" class="notify-link w-full text-center border border-navy/30 text-charcoal font-semibold px-5 py-2.5 rounded-full hover:border-navy transition-colors text-sm">
+          Notify Me When Available
+        </a>
+      </div>
+
+      <!-- Volume 4 -->
+      <div class="flex flex-col bg-white border border-navy/10 rounded-2xl p-7">
+        <p class="eyebrow text-slate/50 text-xs uppercase mb-2">Volume 4</p>
+        <h3 class="font-serif text-lg font-semibold text-charcoal mb-2">The Customer &amp; Sales Handbook</h3>
+        <p class="text-sm text-slate leading-relaxed mb-6 flex-1">Part of the planned library. Full details will be shared closer to release.</p>
+        <p class="font-serif text-xl font-semibold text-charcoal mb-1">R249</p>
+        <p class="text-xs text-gold font-semibold uppercase mb-4">Coming Soon</p>
+        <a href="#free-guide" data-interest="volume-4" class="notify-link w-full text-center border border-navy/30 text-charcoal font-semibold px-5 py-2.5 rounded-full hover:border-navy transition-colors text-sm">
+          Notify Me When Available
+        </a>
+      </div>
+
+      <!-- Volume 5 -->
+      <div class="flex flex-col bg-white border border-navy/10 rounded-2xl p-7">
+        <p class="eyebrow text-slate/50 text-xs uppercase mb-2">Volume 5</p>
+        <h3 class="font-serif text-lg font-semibold text-charcoal mb-2">The Practical Marketing Handbook</h3>
+        <p class="text-sm text-slate leading-relaxed mb-6 flex-1">Part of the planned library. Full details will be shared closer to release.</p>
+        <p class="font-serif text-xl font-semibold text-charcoal mb-1">R249</p>
+        <p class="text-xs text-gold font-semibold uppercase mb-4">Coming Soon</p>
+        <a href="#free-guide" data-interest="volume-5" class="notify-link w-full text-center border border-navy/30 text-charcoal font-semibold px-5 py-2.5 rounded-full hover:border-navy transition-colors text-sm">
+          Notify Me When Available
+        </a>
+      </div>
+
+      <!-- Volume 6 -->
+      <div class="flex flex-col bg-white border border-navy/10 rounded-2xl p-7">
+        <p class="eyebrow text-slate/50 text-xs uppercase mb-2">Volume 6</p>
+        <h3 class="font-serif text-lg font-semibold text-charcoal mb-2">The Digital Visibility Handbook</h3>
+        <p class="text-sm text-slate leading-relaxed mb-6 flex-1">Part of the planned library. Full details will be shared closer to release.</p>
+        <p class="font-serif text-xl font-semibold text-charcoal mb-1">R249</p>
+        <p class="text-xs text-gold font-semibold uppercase mb-4">Coming Soon</p>
+        <a href="#free-guide" data-interest="volume-6" class="notify-link w-full text-center border border-navy/30 text-charcoal font-semibold px-5 py-2.5 rounded-full hover:border-navy transition-colors text-sm">
+          Notify Me When Available
+        </a>
+      </div>
+
+      <!-- Volume 7 -->
+      <div class="flex flex-col bg-white border border-navy/10 rounded-2xl p-7">
+        <p class="eyebrow text-slate/50 text-xs uppercase mb-2">Volume 7</p>
+        <h3 class="font-serif text-lg font-semibold text-charcoal mb-2">The Email Marketing Handbook</h3>
+        <p class="text-sm text-slate leading-relaxed mb-6 flex-1">Part of the planned library. Full details will be shared closer to release.</p>
+        <p class="font-serif text-xl font-semibold text-charcoal mb-1">R249</p>
+        <p class="text-xs text-gold font-semibold uppercase mb-4">Coming Soon</p>
+        <a href="#free-guide" data-interest="volume-7" class="notify-link w-full text-center border border-navy/30 text-charcoal font-semibold px-5 py-2.5 rounded-full hover:border-navy transition-colors text-sm">
+          Notify Me When Available
+        </a>
+      </div>
+
+      <!-- Volume 8 -->
+      <div class="flex flex-col bg-white border border-navy/10 rounded-2xl p-7">
+        <p class="eyebrow text-slate/50 text-xs uppercase mb-2">Volume 8</p>
+        <h3 class="font-serif text-lg font-semibold text-charcoal mb-2">The Small Business Systems Handbook</h3>
+        <p class="text-sm text-slate leading-relaxed mb-6 flex-1">Part of the planned library. Full details will be shared closer to release.</p>
+        <p class="font-serif text-xl font-semibold text-charcoal mb-1">R249</p>
+        <p class="text-xs text-gold font-semibold uppercase mb-4">Coming Soon</p>
+        <a href="#free-guide" data-interest="volume-8" class="notify-link w-full text-center border border-navy/30 text-charcoal font-semibold px-5 py-2.5 rounded-full hover:border-navy transition-colors text-sm">
+          Notify Me When Available
+        </a>
+      </div>
+
+      <!-- Volume 9 -->
+      <div class="flex flex-col bg-white border border-navy/10 rounded-2xl p-7">
+        <p class="eyebrow text-slate/50 text-xs uppercase mb-2">Volume 9</p>
+        <h3 class="font-serif text-lg font-semibold text-charcoal mb-2">The 90-Day Growth Handbook</h3>
+        <p class="text-sm text-slate leading-relaxed mb-6 flex-1">Part of the planned library. Full details will be shared closer to release.</p>
+        <p class="font-serif text-xl font-semibold text-charcoal mb-1">R249</p>
+        <p class="text-xs text-gold font-semibold uppercase mb-4">Coming Soon</p>
+        <a href="#free-guide" data-interest="volume-9" class="notify-link w-full text-center border border-navy/30 text-charcoal font-semibold px-5 py-2.5 rounded-full hover:border-navy transition-colors text-sm">
+          Notify Me When Available
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ WHY THESE GUIDES ============ -->
+  <section class="py-20 px-5 sm:px-8 bg-white">
+    <div class="max-w-3xl mx-auto text-center mb-14">
+      <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-charcoal">Built for the reality of running a small business in South Africa.</h2>
+    </div>
+    <div class="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="border border-navy/10 rounded-2xl p-7">
+        <p class="eyebrow text-gold text-xs uppercase font-semibold mb-3">Practical</p>
+        <p class="text-sm text-slate leading-relaxed">No unnecessary theory. Focus on what you can actually do.</p>
+      </div>
+      <div class="border border-navy/10 rounded-2xl p-7">
+        <p class="eyebrow text-gold text-xs uppercase font-semibold mb-3">South African</p>
+        <p class="text-sm text-slate leading-relaxed">Written with South African small businesses and local platforms in mind.</p>
+      </div>
+      <div class="border border-navy/10 rounded-2xl p-7">
+        <p class="eyebrow text-gold text-xs uppercase font-semibold mb-3">DIY</p>
+        <p class="text-sm text-slate leading-relaxed">Follow the steps yourself without needing to hire an agency.</p>
+      </div>
+      <div class="border border-navy/10 rounded-2xl p-7">
+        <p class="eyebrow text-gold text-xs uppercase font-semibold mb-3">Affordable</p>
+        <p class="text-sm text-slate leading-relaxed">Individual guidebooks cost R249, making it possible to build your knowledge one topic at a time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHO IT'S FOR ============ -->
+  <section class="py-20 px-5 sm:px-8 bg-cream">
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-charcoal">For South African small businesses that want to take control.</h2>
+    </div>
+    <div class="max-w-3xl mx-auto bg-white border border-navy/10 rounded-2xl p-8">
+      <ul class="grid sm:grid-cols-2 gap-3 text-sm text-slate">
+        <li class="flex gap-2"><span class="text-gold">&#10003;</span>New business owners</li>
+        <li class="flex gap-2"><span class="text-gold">&#10003;</span>Sole proprietors</li>
+        <li class="flex gap-2"><span class="text-gold">&#10003;</span>Small service businesses</li>
+        <li class="flex gap-2"><span class="text-gold">&#10003;</span>Local retailers</li>
+        <li class="flex gap-2"><span class="text-gold">&#10003;</span>Home-based businesses</li>
+        <li class="flex gap-2"><span class="text-gold">&#10003;</span>Freelancers</li>
+        <li class="flex gap-2"><span class="text-gold">&#10003;</span>Independent professionals</li>
+        <li class="flex gap-2"><span class="text-gold">&#10003;</span>Small teams without dedicated marketing staff</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ HOW THE LIBRARY WORKS ============ -->
+  <section class="py-20 px-5 sm:px-8 bg-white">
+    <div class="max-w-3xl mx-auto text-center mb-14">
+      <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-charcoal">Learn one thing. Put it into practice. Move to the next.</h2>
+    </div>
+    <div class="max-w-5xl mx-auto grid sm:grid-cols-3 gap-6">
+      <div class="bg-cream border border-navy/10 rounded-2xl p-7">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-navy text-cream font-serif font-semibold text-sm mb-5">01</span>
+        <h3 class="font-serif text-lg font-semibold text-charcoal mb-2">Start</h3>
+        <p class="text-sm text-slate leading-relaxed">Download the free Volume 1 guide.</p>
+      </div>
+      <div class="bg-cream border border-navy/10 rounded-2xl p-7">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-navy text-cream font-serif font-semibold text-sm mb-5">02</span>
+        <h3 class="font-serif text-lg font-semibold text-charcoal mb-2">Apply</h3>
+        <p class="text-sm text-slate leading-relaxed">Follow the practical steps and implement them yourself.</p>
+      </div>
+      <div class="bg-cream border border-navy/10 rounded-2xl p-7">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-navy text-cream font-serif font-semibold text-sm mb-5">03</span>
+        <h3 class="font-serif text-lg font-semibold text-charcoal mb-2">Build</h3>
+        <p class="text-sm text-slate leading-relaxed">When you&rsquo;re ready for the next challenge, choose another R249 guide.</p>
+      </div>
+    </div>
+    <p class="max-w-2xl mx-auto text-center text-sm text-slate/70 mt-10 italic">You never need to buy all nine &mdash; each guide stands on its own.</p>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section class="py-20 px-5 sm:px-8 bg-cream">
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-charcoal">Simple pricing. No complicated subscriptions.</h2>
+    </div>
+    <div class="max-w-2xl mx-auto grid sm:grid-cols-2 gap-6">
+      <div class="bg-navy rounded-2xl p-8 text-center">
+        <p class="eyebrow text-gold text-xs uppercase mb-2">Volume 1</p>
+        <p class="font-serif text-3xl font-semibold text-cream mb-2">Free</p>
+        <p class="text-sm text-cream/75">Your starting point for the library.</p>
+      </div>
+      <div class="bg-white border border-navy/10 rounded-2xl p-8 text-center">
+        <p class="eyebrow text-slate/50 text-xs uppercase mb-2">Volumes 2&ndash;9</p>
+        <p class="font-serif text-3xl font-semibold text-charcoal mb-2">R249 each</p>
+        <p class="text-sm text-slate">Buy only the topics that are useful to you.</p>
+      </div>
+    </div>
+    <p class="max-w-xl mx-auto text-center text-sm text-slate/60 mt-8">No subscriptions. No bundles. No membership &mdash; just individual guidebooks at R249 each.</p>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="py-20 px-5 sm:px-8 bg-navy text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-cream mb-3">Your business doesn&rsquo;t need more jargon.</h2>
+      <p class="font-serif text-xl text-gold mb-6">It needs practical next steps.</p>
+      <p class="text-cream/75 mb-8 leading-relaxed">Start with the free South African Business Setup Guide and build your knowledge one practical step at a time.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#free-guide" class="w-full sm:w-auto bg-gold text-navy font-semibold px-8 py-4 rounded-full hover:bg-cream transition-colors">
+          Get the Free Guide
+        </a>
+        <a href="#library" class="w-full sm:w-auto text-center border border-cream/30 text-cream font-semibold px-8 py-4 rounded-full hover:border-cream transition-colors">
+          Explore the Guide Library
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="py-20 px-5 sm:px-8 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-charcoal text-center mb-12">Questions, answered.</h2>
+
+      <div class="divide-y divide-navy/10 border-t border-b border-navy/10">
+        <details class="group py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-serif text-lg text-charcoal">
+            Are these guides specifically for South African businesses?
+            <svg class="chev w-4 h-4 text-gold transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <p class="text-sm text-slate leading-relaxed mt-3">Yes. The resource library is designed around the practical needs of South African small businesses.</p>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-serif text-lg text-charcoal">
+            How much does each guide cost?
+            <svg class="chev w-4 h-4 text-gold transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <p class="text-sm text-slate leading-relaxed mt-3">Volume 1 is free. Volumes 2&ndash;9 are R249 each.</p>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-serif text-lg text-charcoal">
+            Do I need to buy all nine?
+            <svg class="chev w-4 h-4 text-gold transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <p class="text-sm text-slate leading-relaxed mt-3">No. Each guide is designed to stand on its own, so you can choose the topics that are most useful to your business.</p>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-serif text-lg text-charcoal">
+            Are these courses?
+            <svg class="chev w-4 h-4 text-gold transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <p class="text-sm text-slate leading-relaxed mt-3">No. They are practical DIY guidebooks designed to help you learn and implement the subject yourself.</p>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-serif text-lg text-charcoal">
+            Can I use the guides if I&rsquo;m just starting my business?
+            <svg class="chev w-4 h-4 text-gold transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <p class="text-sm text-slate leading-relaxed mt-3">Yes. Volume 1 is specifically designed as the starting point for the journey.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="py-10 px-5 sm:px-8 bg-cream border-t border-navy/10">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate/60">
+      <div class="text-center sm:text-left">
+        <p class="font-serif text-charcoal">RYNO CROFT <span class="text-gold">DIGITAL STUDIO</span></p>
+        <p class="text-xs mt-1">South African small business resources &mdash; practical DIY guidebooks.</p>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="mailto:hello@rynocroft.com" class="hover:text-gold transition-colors">hello@rynocroft.com</a>
+        <a href="/privacy.html" class="hover:text-gold transition-colors">Privacy Policy</a>
+        <a href="/terms.html" class="hover:text-gold transition-colors">Terms</a>
+      </div>
+      <p>&copy; <span id="year"></span> Ryno Croft Digital Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ======================================================================
+    // Free guide form -> netlify/functions/sa-business-guide.js -> Brevo
+    // (reuses the same BREVO_API_KEY / BREVO_LIST_ID already configured in
+    // Netlify). Also used by the "Notify Me When Available" links on
+    // Volumes 2-9: clicking one scrolls here and pre-fills a hidden
+    // "interest" field so we know which future volume someone asked about,
+    // without inventing a separate purchase flow that doesn't exist yet.
+    // ======================================================================
+    const guideForm = document.getElementById('guideForm');
+    const guideFormError = document.getElementById('guideFormError');
+    const guideFormSubmit = document.getElementById('guideFormSubmit');
+    const guideFormSuccess = document.getElementById('guideFormSuccess');
+    const guideInterest = document.getElementById('guideInterest');
+    const guideFormSubmitLabel = guideFormSubmit.textContent.trim();
+
+    document.querySelectorAll('.notify-link').forEach((link) => {
+      link.addEventListener('click', () => {
+        guideInterest.value = link.getAttribute('data-interest') || 'volume-1';
+        guideFormSubmit.textContent = 'Notify Me When Available';
+      });
+    });
+
+    guideForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      guideFormError.classList.add('hidden');
+
+      const name = document.getElementById('sbName').value.trim();
+      const email = document.getElementById('sbEmail').value.trim();
+      const interest = guideInterest.value || 'volume-1';
+      const hpField = document.getElementById('hpField').value;
+
+      if (!name || !email) {
+        guideFormError.textContent = 'Please fill in your name and email address.';
+        guideFormError.classList.remove('hidden');
+        return;
+      }
+
+      guideFormSubmit.disabled = true;
+      guideFormSubmit.textContent = 'Sending...';
+
+      try {
+        const resp = await fetch('/.netlify/functions/sa-business-guide', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, interest, hpField }),
+        });
+
+        const result = await resp.json().catch(() => ({}));
+
+        if (!resp.ok) {
+          throw new Error(result.error || 'Something went wrong. Please try again.');
+        }
+
+        guideForm.classList.add('hidden');
+        guideFormSuccess.classList.remove('hidden');
+      } catch (err) {
+        guideFormError.textContent = err.message || 'Something went wrong. Please try again or email hello@rynocroft.com directly.';
+        guideFormError.classList.remove('hidden');
+        guideFormSubmit.disabled = false;
+        guideFormSubmit.textContent = guideFormSubmitLabel;
+      }
+    });
+  </script>
+
+</body>
+</html>
