@@ -458,9 +458,11 @@
     // Replace these two placeholder URLs with your real Tally form links
     // once they're built — until then, these buttons won't go anywhere real.
     // ======================================================================
+    // Single shared intake form — it has its own "Select Your Package"
+    // field, so both buttons point at the same Tally form.
     const TALLY_LINKS = {
-      sprint: "https://tally.so/r/REPLACE_WITH_SPRINT_FORM_ID",
-      overhaul: "https://tally.so/r/REPLACE_WITH_OVERHAUL_FORM_ID",
+      sprint: "https://tally.so/r/NpjapG",
+      overhaul: "https://tally.so/r/NpjapG",
     };
     document.querySelectorAll('[data-tally-link]').forEach((el) => {
       const key = el.getAttribute('data-tally-link');
