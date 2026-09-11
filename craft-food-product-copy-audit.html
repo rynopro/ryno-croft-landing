@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Craft Food Product Copy Audit | Ryno Croft Digital Studio</title>
+<meta name="description" content="A $100 website content audit for artisan food and beverage brands. Discover where your product copy may be losing shoppers and get an actionable roadmap for improvement.">
+<link rel="canonical" href="https://rynocroft.com/craft-food-product-copy-audit">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Craft Food Product Copy Audit | Ryno Croft Digital Studio">
+<meta property="og:description" content="A $100 website content audit for artisan food and beverage brands. Discover where your product copy may be losing shoppers and get an actionable roadmap for improvement.">
+<meta property="og:url" content="https://rynocroft.com/craft-food-product-copy-audit">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#FDFBF7',
+          navy: '#0A1128',
+          gold: '#C5A059',
+          slate: '#1F2937',
+          charcoal: '#0F172A',
+        },
+        fontFamily: {
+          serif: ['"Playfair Display"', 'serif'],
+          sans: ['"Inter"', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<!-- ======================================================================
+     PayPal JS SDK — hosted button for the $100 audit checkout, rendered
+     into #paypal-container-R7F5RRRRCFMZ2 once the intake form is submitted
+     (see the render call near the bottom of this page). The client-id
+     below is PayPal's public SDK identifier, not a secret — it's meant to
+     be embedded in front-end code, the same way a Stripe publishable key
+     is. No payment details ever pass through this site or its Netlify
+     functions; PayPal's own hosted checkout handles the transaction.
+     ====================================================================== -->
+<script
+  src="https://www.paypal.com/sdk/js?client-id=BAAp6Fy6QwbR7N27QSY-dbqL43Y52yoafqhhKcuhlw_Mx9sZzXTH7L_pfu36DbupJsJ9zfhgLPEFyUeYuM&components=hosted-buttons&disable-funding=venmo&currency=USD">
+</script>
+
+<style>
+  html { font-family: 'Inter', sans-serif; }
+  .font-serif { font-family: 'Playfair Display', serif; }
+  body { background-color: #FDFBF7; color: #1F2937; }
+  .eyebrow { letter-spacing: 0.12em; }
+  ::selection { background: #C5A059; color: #0A1128; }
+
+  /* Native accordion chevron rotation */
+  details[open] > summary .chev { transform: rotate(180deg); }
+  summary::-webkit-details-marker { display: none; }
+  summary { list-style: none; }
+
+  /* Visible keyboard focus states throughout */
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible {
+    outline: 2px solid #C5A059;
+    outline-offset: 2px;
+  }
+
+  .visually-hidden { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
+</style>
+</head>
+
+<body class="bg-cream text-slate antialiased">
+
+  <!-- ============ SIMPLIFIED LANDING-PAGE HEADER ============ -->
+  <header class="border-b border-navy/10 bg-cream/90 backdrop-blur sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between gap-4">
+      <a href="/craft-food-product-copy-audit" class="font-serif text-base sm:text-xl tracking-wide text-charcoal font-semibold whitespace-nowrap">
+        RYNO CROFT <span class="text-gold">DIGITAL STUDIO</span>
+      </a>
+      <a href="/" class="shrink-0 text-xs sm:text-sm font-medium text-slate hover:text-gold transition-colors">View Main Studio &rarr;</a>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="top" class="pt-16 pb-20 px-5 sm:px-8 bg-cream">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="eyebrow text-gold font-semibold text-xs sm:text-sm uppercase mb-5">For Artisan Food &amp; Beverage Brands</p>
+      <h1 class="font-serif text-3xl sm:text-5xl font-semibold text-charcoal leading-tight mb-6">
+        Your Photos Make Them Salivate. Does Your Product Copy Make Them Buy?
+      </h1>
+      <p class="text-base sm:text-lg text-slate max-w-2xl mx-auto mb-9 leading-relaxed">
+        Stop letting boring, ingredient-only text cost you sales. I rewrite craft food and beverage product pages to sell the flavor profile, sensory experience, and story behind your brand.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+        <a href="#audit-intake" class="w-full sm:w-auto bg-navy text-cream font-semibold px-8 py-4 rounded-full hover:bg-charcoal transition-colors shadow-lg shadow-navy/10">
+          Fix My Product Copy
+        </a>
+        <a href="#audit" class="w-full sm:w-auto text-center border border-navy/30 text-charcoal font-semibold px-8 py-4 rounded-full hover:border-navy transition-colors">
+          See What&rsquo;s Included
+        </a>
+      </div>
+      <p class="text-sm text-slate/70 italic">$100 flat fee. Delivered within 3 business days. No website redesign required.</p>
+    </div>
+  </section>
+
+  <!-- ============ THE BITTER TRUTH ============ -->
+  <section id="problem" class="py-20 px-5 sm:px-8 bg-navy">
+    <div class="max-w-3xl mx-auto text-center mb-10">
+      <p class="eyebrow text-gold font-semibold text-xs sm:text-sm uppercase mb-4">The Problem</p>
+      <h2 class="font-serif text-2xl sm:text-4xl font-semibold text-cream leading-snug">
+        The Bitter Truth: Great Products Can Still Have Weak Product Pages
+      </h2>
+    </div>
+    <div class="max-w-2xl mx-auto text-cream/85 leading-relaxed space-y-5 text-base sm:text-lg">
+      <p>You&rsquo;ve spent countless hours perfecting your recipes, refining your small-batch process, and capturing product photography good enough to make people hungry.</p>
+      <p>But when a hungry shopper actually lands on your website, what do they read?</p>
+      <p>If your product descriptions read like a grocery store receipt &mdash; just ingredients and bottle sizes &mdash; you&rsquo;re <span class="text-gold font-semibold">leaving money on the table</span>.</p>
+      <p>In the craft food and drink world, customers don&rsquo;t just buy a product; they buy an experience. They want to taste the <span class="text-gold font-semibold">smoky undertones</span>, feel the <span class="text-gold font-semibold">velvety texture</span>, and imagine the <span class="text-gold font-semibold">perfect weekend food pairings</span> right through the screen.</p>
+      <p>If your copy isn&rsquo;t doing that heavy lifting, mobile shoppers can bounce before they ever reach checkout.</p>
+    </div>
+  </section>
+
+  <!-- ============ THE SOLUTION ============ -->
+  <section id="solution" class="py-20 px-5 sm:px-8 bg-white">
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <p class="eyebrow text-gold font-semibold text-xs sm:text-sm uppercase mb-4">A Lower-Cost First Step</p>
+      <h2 class="font-serif text-2xl sm:text-4xl font-semibold text-charcoal mb-5 leading-snug">
+        You May Not Need a New Website. You May Need Better Words.
+      </h2>
+      <p class="text-slate leading-relaxed max-w-2xl mx-auto">
+        You don&rsquo;t need a costly, time-consuming website overhaul to boost your revenue. You just need to change the words you use to talk to your customers. At Ryno Croft Digital Studio, I specialize in high-converting, sensory product copy engineered specifically for artisan food and beverage brands.
+      </p>
+    </div>
+
+    <div class="max-w-3xl mx-auto bg-cream border border-navy/10 rounded-2xl p-7 sm:p-8">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 text-center">
+        <span class="bg-white border border-navy/10 rounded-full px-5 py-2.5 text-sm font-semibold text-charcoal">Better Product Copy</span>
+        <span class="text-gold text-xl rotate-90 sm:rotate-0" aria-hidden="true">&rarr;</span>
+        <span class="bg-white border border-navy/10 rounded-full px-5 py-2.5 text-sm font-semibold text-charcoal">Stronger Desire</span>
+        <span class="text-gold text-xl rotate-90 sm:rotate-0" aria-hidden="true">&rarr;</span>
+        <span class="bg-navy text-cream rounded-full px-5 py-2.5 text-sm font-semibold">Greater Purchase Confidence</span>
+      </div>
+      <p class="text-xs text-slate/60 text-center mt-5 italic">The direction we&rsquo;re working toward &mdash; not a guaranteed result.</p>
+    </div>
+  </section>
+
+  <!-- ============ THE $100 AUDIT ============ -->
+  <section id="audit" class="scroll-mt-20 py-20 px-5 sm:px-8 bg-cream">
+    <div class="max-w-3xl mx-auto text-center mb-6">
+      <p class="eyebrow text-gold font-semibold text-xs sm:text-sm uppercase mb-4">The Offer</p>
+      <h2 class="font-serif text-2xl sm:text-4xl font-semibold text-charcoal mb-4">The $100 Website Content Audit</h2>
+      <p class="text-slate leading-relaxed max-w-2xl mx-auto">
+        Get a clear, actionable roadmap to turn more store visitors into paying customers &mdash; without changing your website design.
+      </p>
+    </div>
+    <p class="max-w-2xl mx-auto text-center text-sm text-slate/70 italic mb-14">This is a focused copy audit, not a website redesign. Your design, platform and photography stay exactly as they are.</p>
+
+    <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+
+      <!-- Step 1 -->
+      <div class="flex flex-col bg-white border border-navy/10 rounded-2xl p-7">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-navy text-cream font-serif font-semibold text-sm mb-5">01</span>
+        <h3 class="font-serif text-lg font-semibold text-charcoal mb-2">Secure Your Spot</h3>
+        <p class="text-sm text-slate leading-relaxed">Click the audit button below to request your analysis. You&rsquo;ll be taken to secure PayPal checkout to complete your $100 payment &mdash; no long questionnaires required.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="flex flex-col bg-white border border-navy/10 rounded-2xl p-7">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-navy text-cream font-serif font-semibold text-sm mb-5">02</span>
+        <h3 class="font-serif text-lg font-semibold text-charcoal mb-2">The Comprehensive Deep-Dive</h3>
+        <p class="text-sm text-slate leading-relaxed">I personally audit your current copy to find out where you&rsquo;re losing shoppers &mdash; reviewing readability, formatting and sensory hooks on mobile.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="flex flex-col bg-white border border-navy/10 rounded-2xl p-7">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-navy text-cream font-serif font-semibold text-sm mb-5">03</span>
+        <h3 class="font-serif text-lg font-semibold text-charcoal mb-2">Get Your Roadmap</h3>
+        <p class="text-sm text-slate leading-relaxed">Receive a personalized, actionable PDF report delivered directly to your email within 3 business days of payment.</p>
+      </div>
+
+      <!-- Step 4 — the upgrade path, deliberately made to stand out -->
+      <div class="relative flex flex-col bg-navy rounded-2xl p-7 shadow-xl shadow-navy/20">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-navy text-xs font-bold uppercase tracking-wide px-4 py-1.5 rounded-full whitespace-nowrap">
+          Your Upgrade Path
+        </span>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gold text-navy font-serif font-semibold text-sm mb-5 mt-2">04</span>
+        <h3 class="font-serif text-lg font-semibold text-cream mb-2">Choose Your Next Step</h3>
+        <p class="text-sm text-cream/85 leading-relaxed">Implement the changes yourself, or hire Ryno Croft Digital Studio to write it for you &mdash; and I&rsquo;ll credit the full $100 audit fee toward your rewriting project.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ WHAT I LOOK FOR ============ -->
+  <section class="py-20 px-5 sm:px-8 bg-white">
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-charcoal mb-4">What I Look For</h2>
+      <p class="text-slate leading-relaxed">Every product page is different, so every audit is different too &mdash; but this is where I typically start looking, based on where craft food and beverage brands most often lose shoppers.</p>
+    </div>
+    <div class="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      <div class="border border-navy/10 rounded-2xl p-5 text-center">
+        <p class="font-serif text-sm sm:text-base font-semibold text-charcoal">Sensory Appeal</p>
+      </div>
+      <div class="border border-navy/10 rounded-2xl p-5 text-center">
+        <p class="font-serif text-sm sm:text-base font-semibold text-charcoal">Product Storytelling</p>
+      </div>
+      <div class="border border-navy/10 rounded-2xl p-5 text-center">
+        <p class="font-serif text-sm sm:text-base font-semibold text-charcoal">Clarity &amp; Readability</p>
+      </div>
+      <div class="border border-navy/10 rounded-2xl p-5 text-center">
+        <p class="font-serif text-sm sm:text-base font-semibold text-charcoal">Mobile Presentation</p>
+      </div>
+      <div class="border border-navy/10 rounded-2xl p-5 text-center">
+        <p class="font-serif text-sm sm:text-base font-semibold text-charcoal">Customer-Focused Language</p>
+      </div>
+      <div class="border border-navy/10 rounded-2xl p-5 text-center">
+        <p class="font-serif text-sm sm:text-base font-semibold text-charcoal">Benefits vs. Features</p>
+      </div>
+      <div class="border border-navy/10 rounded-2xl p-5 text-center">
+        <p class="font-serif text-sm sm:text-base font-semibold text-charcoal">Product Differentiation</p>
+      </div>
+      <div class="border border-navy/10 rounded-2xl p-5 text-center">
+        <p class="font-serif text-sm sm:text-base font-semibold text-charcoal">Brand Voice</p>
+      </div>
+      <div class="border border-navy/10 rounded-2xl p-5 text-center">
+        <p class="font-serif text-sm sm:text-base font-semibold text-charcoal">Purchase Confidence</p>
+      </div>
+      <div class="border border-navy/10 rounded-2xl p-5 text-center">
+        <p class="font-serif text-sm sm:text-base font-semibold text-charcoal">Calls to Action</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BEFORE / AFTER ============ -->
+  <section class="py-20 px-5 sm:px-8 bg-cream">
+    <div class="max-w-3xl mx-auto text-center mb-4">
+      <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-charcoal">See the Difference</h2>
+    </div>
+    <p class="max-w-2xl mx-auto text-center text-xs uppercase tracking-wide text-slate/50 font-semibold mb-10">Illustrative example &mdash; not a rewrite from an actual client&rsquo;s page</p>
+
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 items-stretch">
+      <div class="bg-white border border-navy/10 rounded-2xl p-8">
+        <p class="eyebrow text-xs uppercase text-slate/50 mb-4">Before</p>
+        <p class="text-slate leading-relaxed">Small-batch chilli sauce made with fresh chillies, vinegar, garlic and spices. Available in a 250ml bottle.</p>
+      </div>
+      <div class="bg-navy rounded-2xl p-8">
+        <p class="eyebrow text-xs uppercase text-gold mb-4">After</p>
+        <p class="font-serif text-lg text-cream mb-3 leading-snug">A slow-building chilli kick with a smoky finish.</p>
+        <p class="text-cream/80 leading-relaxed">Made in small batches with fresh chillies, garlic and carefully selected spices, this sauce starts with bright heat before settling into a rich, smoky finish. Try it with grilled meats, eggs, tacos or your favourite weekend braai.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" class="py-20 px-5 sm:px-8 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-charcoal text-center mb-12">Frequently Asked Questions</h2>
+
+      <div class="divide-y divide-navy/10 border-t border-b border-navy/10">
+        <details class="group py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-serif text-lg text-charcoal">
+            Why a copy audit instead of a website redesign?
+            <svg class="chev w-4 h-4 text-gold transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <p class="text-sm text-slate leading-relaxed mt-3">A visually attractive website can still have weak product messaging. The audit focuses specifically on the words shoppers read while deciding whether your product is worth buying &mdash; a lower-cost, lower-risk first step before you consider a larger redesign.</p>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-serif text-lg text-charcoal">
+            What platforms do you work with?
+            <svg class="chev w-4 h-4 text-gold transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <p class="text-sm text-slate leading-relaxed mt-3">The audit can be applied to common ecommerce platforms such as Shopify, WooCommerce, Squarespace Commerce, Wix and similar ecommerce websites, provided the product pages are publicly accessible. This is a copy audit, not platform-specific technical development work.</p>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-serif text-lg text-charcoal">
+            How long does the audit take?
+            <svg class="chev w-4 h-4 text-gold transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <p class="text-sm text-slate leading-relaxed mt-3">The completed PDF audit is delivered within 3 business days of confirmed payment.</p>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-serif text-lg text-charcoal">
+            Do you need my website login?
+            <svg class="chev w-4 h-4 text-gold transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <p class="text-sm text-slate leading-relaxed mt-3">No. The audit is based on your publicly accessible product pages. I&rsquo;ll never ask for passwords, admin access or any sensitive account credentials.</p>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-serif text-lg text-charcoal">
+            What will I receive?
+            <svg class="chev w-4 h-4 text-gold transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <p class="text-sm text-slate leading-relaxed mt-3">A personalized PDF report identifying the main product-copy opportunities and weaknesses on the pages you submit, along with practical recommendations for improving your customer-facing copy.</p>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between cursor-pointer font-serif text-lg text-charcoal">
+            What if I want Ryno Croft to rewrite the product pages?
+            <svg class="chev w-4 h-4 text-gold transition-transform shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <p class="text-sm text-slate leading-relaxed mt-3">That&rsquo;s entirely your choice. You can implement the recommendations yourself, or engage Ryno Croft Digital Studio for the rewriting work. Either way, the $100 audit fee will be credited toward the full product-copy rewriting project.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INTAKE / PAYMENT ============ -->
+  <section id="audit-intake" class="scroll-mt-20 py-20 px-5 sm:px-8 bg-navy">
+    <div class="max-w-3xl mx-auto text-center mb-10">
+      <h2 class="font-serif text-2xl sm:text-4xl font-semibold text-cream mb-5">Ready to See What Your Product Pages Are Really Saying?</h2>
+      <p class="text-cream/80 leading-relaxed max-w-2xl mx-auto">Start with a focused $100 audit. I&rsquo;ll show you where your product copy may be losing attention, desire and purchase confidence &mdash; and what to improve.</p>
+    </div>
+
+    <div class="max-w-xl mx-auto bg-cream rounded-2xl p-7 sm:p-9 mb-10">
+      <form id="auditForm" novalidate>
+        <p class="visually-hidden">
+          <label>Don&rsquo;t fill this out if you&rsquo;re human: <input name="hpField" id="hpField" tabindex="-1" autocomplete="off"></label>
+        </p>
+
+        <div class="mb-4">
+          <label for="cfName" class="block text-sm font-medium text-charcoal mb-1.5">Your Name</label>
+          <input type="text" id="cfName" name="name" required class="w-full border border-navy/20 rounded-lg px-4 py-2.5 text-slate focus:border-navy outline-none">
+        </div>
+
+        <div class="mb-4">
+          <label for="cfEmail" class="block text-sm font-medium text-charcoal mb-1.5">Business Email Address</label>
+          <input type="email" id="cfEmail" name="email" required class="w-full border border-navy/20 rounded-lg px-4 py-2.5 text-slate focus:border-navy outline-none">
+        </div>
+
+        <div class="mb-4">
+          <label for="cfWebsite" class="block text-sm font-medium text-charcoal mb-1.5">Your Website URL</label>
+          <input type="url" id="cfWebsite" name="websiteUrl" required placeholder="https://yourbrand.com" class="w-full border border-navy/20 rounded-lg px-4 py-2.5 text-slate focus:border-navy outline-none">
+        </div>
+
+        <div class="mb-4">
+          <label for="cfPlatform" class="block text-sm font-medium text-charcoal mb-1.5">E-commerce Platform</label>
+          <select id="cfPlatform" name="platform" required class="w-full border border-navy/20 rounded-lg px-4 py-2.5 text-slate focus:border-navy outline-none bg-white">
+            <option value="" disabled selected>Select your platform&hellip;</option>
+            <option value="Shopify">Shopify</option>
+            <option value="WooCommerce">WooCommerce</option>
+            <option value="Squarespace">Squarespace</option>
+            <option value="Wix">Wix</option>
+            <option value="BigCommerce">BigCommerce</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="mb-5">
+          <label for="cfPriorityPages" class="block text-sm font-medium text-charcoal mb-1.5">Which 2&ndash;3 product pages are your top priorities?</label>
+          <textarea id="cfPriorityPages" name="priorityPages" required rows="4" placeholder="https://yourbrand.com/products/example-1&#10;https://yourbrand.com/products/example-2" class="w-full border border-navy/20 rounded-lg px-4 py-2.5 text-slate focus:border-navy outline-none"></textarea>
+          <p class="text-xs text-slate/60 mt-1.5">Paste the URLs of the 2&ndash;3 product pages you&rsquo;d most like me to review.</p>
+        </div>
+
+        <p id="auditFormError" role="alert" class="text-sm text-red-600 mb-3 hidden"></p>
+
+        <button type="submit" id="auditFormSubmit" class="w-full bg-navy text-cream font-semibold px-6 py-4 rounded-full hover:bg-charcoal transition-colors">
+          Request My $100 Audit via PayPal
+        </button>
+        <p class="text-xs text-slate/60 mt-3 text-center">Once you submit your details, you&rsquo;ll be taken to secure PayPal checkout to complete your $100 payment.</p>
+      </form>
+
+      <div id="auditFormSuccess" class="hidden text-center">
+        <p class="font-serif text-lg text-charcoal mb-2">Thanks &mdash; got your details.</p>
+        <p class="text-sm text-slate mb-6">Complete your secure $100 payment via PayPal below to get your audit underway.</p>
+        <div id="paypal-container-R7F5RRRRCFMZ2" class="max-w-xs mx-auto"></div>
+      </div>
+    </div>
+
+    <!-- ============ TRUST / RISK REDUCTION ============ -->
+    <div class="max-w-3xl mx-auto flex flex-wrap items-center justify-center gap-3">
+      <span class="inline-flex items-center gap-1.5 bg-cream/10 border border-gold/40 text-cream/90 text-xs sm:text-sm px-4 py-2 rounded-full"><span class="text-gold">&#10003;</span>No website redesign required</span>
+      <span class="inline-flex items-center gap-1.5 bg-cream/10 border border-gold/40 text-cream/90 text-xs sm:text-sm px-4 py-2 rounded-full"><span class="text-gold">&#10003;</span>No login credentials required</span>
+      <span class="inline-flex items-center gap-1.5 bg-cream/10 border border-gold/40 text-cream/90 text-xs sm:text-sm px-4 py-2 rounded-full"><span class="text-gold">&#10003;</span>Personalized audit</span>
+      <span class="inline-flex items-center gap-1.5 bg-cream/10 border border-gold/40 text-cream/90 text-xs sm:text-sm px-4 py-2 rounded-full"><span class="text-gold">&#10003;</span>Delivered within 3 business days</span>
+      <span class="inline-flex items-center gap-1.5 bg-cream/10 border border-gold/40 text-cream/90 text-xs sm:text-sm px-4 py-2 rounded-full"><span class="text-gold">&#10003;</span>$100 credited toward a full rewrite</span>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="py-10 px-5 sm:px-8 bg-cream border-t border-navy/10">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate/60">
+      <div class="text-center sm:text-left">
+        <p class="font-serif text-charcoal">RYNO CROFT <span class="text-gold">DIGITAL STUDIO</span></p>
+        <p class="text-xs mt-1">Sensory product copy for artisan food and beverage brands.</p>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="mailto:hello@rynocroft.com" class="hover:text-gold transition-colors">hello@rynocroft.com</a>
+        <a href="/privacy.html" class="hover:text-gold transition-colors">Privacy Policy</a>
+        <a href="/terms.html" class="hover:text-gold transition-colors">Terms</a>
+      </div>
+      <p>&copy; <span id="year"></span> Ryno Croft Digital Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ======================================================================
+    // $100 Audit intake form -> netlify/functions/craft-food-audit.js ->
+    // Brevo (reuses the same BREVO_API_KEY / BREVO_LIST_ID already
+    // configured in Netlify for the other lead-capture forms on this site),
+    // so the audit scope (name, email, site, platform, priority pages) is
+    // captured before payment. See product-copy-review.js / sa-business-
+    // guide.js for the identical pattern used elsewhere on this site.
+    //
+    // Payment itself is handled separately and entirely by PayPal: once the
+    // intake details are saved, the success panel below renders PayPal's
+    // own Hosted Button (see the <script> in <head> and the
+    // #paypal-container-R7F5RRRRCFMZ2 div above) so the visitor completes
+    // the $100 payment through PayPal's secure checkout. No card or payment
+    // details ever touch this site or its Netlify functions, and the
+    // client-id in <head> is PayPal's public SDK identifier, not a secret.
+    // ======================================================================
+    const auditForm = document.getElementById('auditForm');
+    const auditFormError = document.getElementById('auditFormError');
+    const auditFormSubmit = document.getElementById('auditFormSubmit');
+    const auditFormSuccess = document.getElementById('auditFormSuccess');
+    const auditFormSubmitLabel = auditFormSubmit.textContent.trim();
+
+    auditForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      auditFormError.classList.add('hidden');
+
+      const name = document.getElementById('cfName').value.trim();
+      const email = document.getElementById('cfEmail').value.trim();
+      const websiteUrl = document.getElementById('cfWebsite').value.trim();
+      const platform = document.getElementById('cfPlatform').value.trim();
+      const priorityPages = document.getElementById('cfPriorityPages').value.trim();
+      const hpField = document.getElementById('hpField').value;
+
+      if (!name || !email || !websiteUrl || !platform || !priorityPages) {
+        auditFormError.textContent = 'Please fill in every field so I know where to focus the audit.';
+        auditFormError.classList.remove('hidden');
+        return;
+      }
+
+      auditFormSubmit.disabled = true;
+      auditFormSubmit.textContent = 'Sending...';
+
+      try {
+        const resp = await fetch('/.netlify/functions/craft-food-audit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, websiteUrl, platform, priorityPages, hpField }),
+        });
+
+        const result = await resp.json().catch(() => ({}));
+
+        if (!resp.ok) {
+          throw new Error(result.error || 'Something went wrong. Please try again.');
+        }
+
+        auditForm.classList.add('hidden');
+        auditFormSuccess.classList.remove('hidden');
+
+        // Render PayPal's Hosted Button now that the container is visible
+        // (rendering into a hidden element can cause PayPal's SDK to size
+        // it incorrectly, so this waits until after the reveal above).
+        if (window.paypal && typeof window.paypal.HostedButtons === 'function') {
+          window.paypal.HostedButtons({
+            hostedButtonId: 'R7F5RRRRCFMZ2',
+          }).render('#paypal-container-R7F5RRRRCFMZ2');
+        } else {
+          console.error('craft-food-audit: PayPal SDK did not load — the checkout button could not be rendered.');
+        }
+      } catch (err) {
+        auditFormError.textContent = err.message || 'Something went wrong. Please try again or email hello@rynocroft.com directly.';
+        auditFormError.classList.remove('hidden');
+        auditFormSubmit.disabled = false;
+        auditFormSubmit.textContent = auditFormSubmitLabel;
+      }
+    });
+  </script>
+
+</body>
+</html>
