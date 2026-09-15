@@ -504,8 +504,6 @@
     },
   }).render('#' + containerId);
 }
-  }
-
   renderPayPalButton('paypal-sprint', 'paypal-sprint-note', '247.00', 'Product Copy Sprint — 10 Products');
   renderPayPalButton('paypal-overhaul', 'paypal-overhaul-note', '397.00', 'Product Copy Overhaul — 20 Products');
 
@@ -514,12 +512,6 @@
   // -> Brevo (reuses the same BREVO_API_KEY / BREVO_LIST_ID already
   // configured in Netlify for the Cal.com booking sync).
   // ======================================================================
-  const reviewForm = document.getElementById('reviewForm');
-    // ======================================================================
-    // Free Product Review form -> netlify/functions/product-copy-review.js
-    // -> Brevo (reuses the same BREVO_API_KEY / BREVO_LIST_ID already
-    // configured in Netlify for the Cal.com booking sync).
-    // ======================================================================
     const reviewForm = document.getElementById('reviewForm');
     const reviewFormError = document.getElementById('reviewFormError');
     const reviewFormSubmit = document.getElementById('reviewFormSubmit');
