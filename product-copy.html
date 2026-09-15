@@ -267,7 +267,7 @@
       </p>
     </div>
 
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 items-stretch">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-stretch">
 
       <!-- Package 1 -->
       <div class="flex flex-col bg-cream border border-navy/10 rounded-2xl p-8">
@@ -284,9 +284,10 @@
           <li class="flex gap-2"><span class="text-gold">&#10003;</span>Consistent brand voice</li>
           <li class="flex gap-2"><span class="text-gold">&#10003;</span>1 revision round</li>
         </ul>
-        <a href="#" data-tally-link="sprint" target="_blank" rel="noopener noreferrer" class="w-full text-center border border-navy text-charcoal font-semibold px-6 py-3 rounded-full hover:bg-navy hover:text-cream transition-colors">
-          Start My 10-Product Sprint
-        </a>
+        <div id="paypal-sprint"></div>
+<p id="paypal-sprint-note" class="hidden text-sm text-charcoal font-medium mt-3">
+  Payment received — scroll down and tell us where to find your products. ↓
+</p>
       </div>
 
       <!-- Package 2 (Most Popular) -->
@@ -307,30 +308,12 @@
           <li class="flex gap-2"><span class="text-gold">&#10003;</span>Title/meta recommendations</li>
           <li class="flex gap-2"><span class="text-gold">&#10003;</span>2 revision rounds</li>
         </ul>
-        <a href="#" data-tally-link="overhaul" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-gold text-navy font-semibold px-6 py-3 rounded-full hover:bg-cream transition-colors">
-          Improve 20 Product Pages
-        </a>
+        <div id="paypal-overhaul"></div>
+<p id="paypal-overhaul-note" class="hidden text-sm text-cream font-medium mt-3">
+  Payment received — scroll down and tell us where to find your products. ↓
+</p>
       </div>
 
-      <!-- Package 3 -->
-      <div class="flex flex-col bg-cream border border-navy/10 rounded-2xl p-8">
-        <h3 class="font-serif text-xl font-semibold text-charcoal mb-1">Catalogue Overhaul</h3>
-        <p class="text-sm text-slate/70 mb-1">50 Products</p>
-        <p class="text-3xl font-serif font-semibold text-charcoal mb-3">$897+</p>
-        <p class="text-sm text-slate/70 mb-6">For established ecommerce stores.</p>
-        <ul class="text-sm text-slate space-y-3 mb-8 flex-1">
-          <li class="flex gap-2"><span class="text-gold">&#10003;</span>50 product descriptions</li>
-          <li class="flex gap-2"><span class="text-gold">&#10003;</span>Catalogue-wide consistency</li>
-          <li class="flex gap-2"><span class="text-gold">&#10003;</span>Benefit-focused positioning</li>
-          <li class="flex gap-2"><span class="text-gold">&#10003;</span>SEO-conscious copy</li>
-          <li class="flex gap-2"><span class="text-gold">&#10003;</span>Product-page structure</li>
-          <li class="flex gap-2"><span class="text-gold">&#10003;</span>Brand voice alignment</li>
-          <li class="flex gap-2"><span class="text-gold">&#10003;</span>2 revision rounds</li>
-        </ul>
-        <button data-open-modal class="w-full text-center border border-navy text-charcoal font-semibold px-6 py-3 rounded-full hover:bg-navy hover:text-cream transition-colors">
-          Discuss My Catalogue
-        </button>
-      </div>
 
     </div>
   </section>
@@ -435,9 +418,9 @@
   </footer>
 
   <!-- ============ SCRIPTS ============ -->
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
+<script src="https://www.paypal.com/sdk/js?client-id=BAA15NmYkP_ROC6Ht7pY2HigmDCsfYeP8PXgzTXGN78bxQxHNKL-XaPMyN_eT8CGlUKgP1EvEa83uOiUqQ&currency=USD"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
     // ======================================================================
     // Cal.com booking popup — same official embed mechanism used sitewide,
     // reused here for the package CTA buttons ("Start My 10-Product
@@ -446,29 +429,7 @@
     // doesn't exist.
     // ======================================================================
     const CAL_LINK = "rynocroftdigitalstudio/15min";
-
-    // ======================================================================
-    // CONFIG — Tally form links for the two fixed-scope packages.
-    // Flow: visitor clicks the package button -> lands on your Tally form
-    // (collects their details/product URLs) -> submission triggers a
-    // Zapier/Make automation that generates a PayPal Invoice for the full
-    // package amount with a 50% minimum deposit, and emails it to the
-    // client. The remaining 50% is collected on the same invoice at
-    // delivery. See the Zapier/Make blueprint doc for the automation setup.
-    // Replace these two placeholder URLs with your real Tally form links
-    // once they're built — until then, these buttons won't go anywhere real.
-    // ======================================================================
-    // Single shared intake form — it has its own "Select Your Package"
-    // field, so both buttons point at the same Tally form.
-    const TALLY_LINKS = {
-      sprint: "https://tally.so/r/NpjapG",
-      overhaul: "https://tally.so/r/NpjapG",
-    };
-    document.querySelectorAll('[data-tally-link]').forEach((el) => {
-      const key = el.getAttribute('data-tally-link');
-      if (TALLY_LINKS[key]) el.setAttribute('href', TALLY_LINKS[key]);
-    });
-
+  
     (function (C, A, L) {
       let p = function (a, ar) { a.q.push(ar); };
       let d = C.document;
@@ -509,6 +470,26 @@
       el.setAttribute('data-cal-config', '{"layout":"month_view"}');
     });
 
+  // ======================================================================
+  // PayPal Buy Now buttons — Product Copy Sprint & Overhaul.
+  // On approval: hide the button, reveal the confirmation note, and scroll
+  // to the existing #free-review form so we collect store/product URLs
+  // through infrastructure that already exists — no new page, no new
+  // Netlify function.
+  // ======================================================================
+  function renderPayPalButton(containerId, noteId, amount, label) {
+    ...
+  }
+
+  renderPayPalButton('paypal-sprint', 'paypal-sprint-note', '247.00', 'Product Copy Sprint — 10 Products');
+  renderPayPalButton('paypal-overhaul', 'paypal-overhaul-note', '397.00', 'Product Copy Overhaul — 20 Products');
+
+  // ======================================================================
+  // Free Product Review form -> netlify/functions/product-copy-review.js
+  // -> Brevo (reuses the same BREVO_API_KEY / BREVO_LIST_ID already
+  // configured in Netlify for the Cal.com booking sync).
+  // ======================================================================
+  const reviewForm = document.getElementById('reviewForm');
     // ======================================================================
     // Free Product Review form -> netlify/functions/product-copy-review.js
     // -> Brevo (reuses the same BREVO_API_KEY / BREVO_LIST_ID already
