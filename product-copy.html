@@ -477,8 +477,33 @@
   // through infrastructure that already exists — no new page, no new
   // Netlify function.
   // ======================================================================
-  function renderPayPalButton(containerId, noteId, amount, label) {
-    ...
+    function renderPayPalButton(containerId, noteId, amount, label) {
+  paypal.Buttons({
+    style: { layout: 'horizontal', color: 'black', shape: 'pill', label: 'pay', tagline: false },
+    createOrder: function (data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          description: label,
+          amount: { value: amount, currency_code: 'USD' },
+        }],
+      });
+    },
+    onApprove: function (data, actions) {
+      return actions.order.capture().then(function () {
+        document.getElementById(containerId).classList.add('hidden');
+        document.getElementById(noteId).classList.remove('hidden');
+        document.getElementById('free-review').scrollIntoView({ behavior: 'smooth' });
+      });
+    },
+    onError: function (err) {
+      console.error(err);
+      document.getElementById(containerId).insertAdjacentHTML(
+        'afterend',
+        '<p class="text-sm text-red-600 mt-2">Something went wrong — email <a href="mailto:hello@rynocroft.com" class="underline">hello@rynocroft.com</a> and we\'ll sort your order manually.</p>'
+      );
+    },
+  }).render('#' + containerId);
+}
   }
 
   renderPayPalButton('paypal-sprint', 'paypal-sprint-note', '247.00', 'Product Copy Sprint — 10 Products');
