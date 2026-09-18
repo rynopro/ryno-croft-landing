@@ -495,7 +495,10 @@
           });
         },
         onApprove: function(data, actions) {
-          alert(data.subscriptionID); // You can add optional success message for the subscriber here
+          // Send the new member to a proper thank-you page instead of a
+          // plain browser alert, carrying the subscription ID through so
+          // they (and we) have a reference for support if needed.
+          window.location.href = 'growth-club-thank-you.html?subscription_id=' + encodeURIComponent(data.subscriptionID);
         }
     }).render('#paypal-button-container-P-4J949504MK373092RNKWWX6Q'); // Renders the PayPal button
   </script>
