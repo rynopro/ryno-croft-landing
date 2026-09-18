@@ -55,6 +55,33 @@
   to = "/"
   status = 301
 
+# ---------------------------------------------------------------------------
+# The Product Copy / ecommerce service has been discontinued (Sept 2026
+# refocus). These pages have been removed from the repo, so the redirects
+# below point any existing bookmarks, backlinks or search results at the
+# closest current, relevant service instead of a 404.
+# ---------------------------------------------------------------------------
+
+[[redirects]]
+  from = "/product-copy"
+  to = "/email-marketing.html"
+  status = 301
+
+[[redirects]]
+  from = "/product-copy/*"
+  to = "/email-marketing.html"
+  status = 301
+
+[[redirects]]
+  from = "/craft-food-product-copy-audit"
+  to = "/authority-audit.html"
+  status = 301
+
+[[redirects]]
+  from = "/craft-food-product-copy-audit/*"
+  to = "/authority-audit.html"
+  status = 301
+
 [[redirects]]
   from = "/free-lead-nurture-kit/*"
   to = "/"
