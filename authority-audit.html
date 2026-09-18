@@ -118,9 +118,9 @@
            class="w-full sm:w-auto bg-navy text-cream font-semibold px-8 py-4 rounded-full hover:bg-charcoal transition-colors shadow-lg shadow-navy/10">
           Get Your Authority Audit
         </a>
-        <button data-open-modal class="w-full sm:w-auto text-center border border-navy/30 text-charcoal font-semibold px-8 py-4 rounded-full hover:border-navy transition-colors">
+        <a href="https://cal.com/rynocroftdigitalstudio/15min" target="_blank" rel="noopener noreferrer" data-cal-link="rynocroftdigitalstudio/15min" data-cal-config='{"layout":"month_view"}' class="w-full sm:w-auto text-center border border-navy/30 text-charcoal font-semibold px-8 py-4 rounded-full hover:border-navy transition-colors">
           Discuss Your Requirements
-        </button>
+        </a>
       </div>
       <p class="text-sm text-slate/70 italic">A practical diagnostic &mdash; not a generic marketing report.</p>
     </div>
@@ -211,9 +211,9 @@
            class="w-full sm:w-auto bg-navy text-cream font-semibold px-8 py-4 rounded-full hover:bg-charcoal transition-colors">
           Get Your Authority Audit
         </a>
-        <button data-open-modal class="w-full sm:w-auto text-center border border-navy/30 text-charcoal font-semibold px-8 py-4 rounded-full hover:border-navy transition-colors">
+        <a href="https://cal.com/rynocroftdigitalstudio/15min" target="_blank" rel="noopener noreferrer" data-cal-link="rynocroftdigitalstudio/15min" data-cal-config='{"layout":"month_view"}' class="w-full sm:w-auto text-center border border-navy/30 text-charcoal font-semibold px-8 py-4 rounded-full hover:border-navy transition-colors">
           Discuss Your Requirements
-        </button>
+        </a>
       </div>
     </div>
   </section>
@@ -234,7 +234,10 @@
 
   <!-- ============ SCRIPTS ============ -->
   <script>
-    const CAL_LINK = "rynocroftdigitalstudio/15min";
+    // Cal.com event link: every "Discuss Your Requirements" link above is a
+    // real <a href="https://cal.com/rynocroftdigitalstudio/15min"> with
+    // data-cal-link/data-cal-config already set in the HTML, so booking
+    // works even if the embed script below fails to load.
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -293,11 +296,6 @@
       styles: { branding: { brandColor: "#0A1128" } },
       hideEventTypeDetails: false,
       layout: "month_view",
-    });
-
-    document.querySelectorAll('[data-open-modal]').forEach((el) => {
-      el.setAttribute('data-cal-link', CAL_LINK);
-      el.setAttribute('data-cal-config', '{"layout":"month_view"}');
     });
   </script>
 

@@ -354,7 +354,7 @@
       </div>
       <p class="text-sm text-cream/60">
         Already have a specific requirement in mind?
-        <button data-open-modal class="text-gold font-semibold hover:underline">Discuss Your Requirements</button>
+        <a href="https://cal.com/rynocroftdigitalstudio/15min" target="_blank" rel="noopener noreferrer" data-cal-link="rynocroftdigitalstudio/15min" data-cal-config='{"layout":"month_view"}' class="text-gold font-semibold hover:underline">Discuss Your Requirements</a>
       </p>
     </div>
   </section>
@@ -372,9 +372,9 @@
           <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm5.8 14.1c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.12.11-1.8-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.15.12.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.18 1.53 1.91 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.16-.19.68-.79.87-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.26.13.43.19.5.3.06.11.06.63-.18 1.31z"/></svg>
           WhatsApp Us
         </a>
-        <button data-open-modal class="inline-flex items-center justify-center border border-navy/30 text-charcoal font-semibold text-sm px-6 py-3 rounded-full hover:border-navy transition-colors">
+        <a href="https://cal.com/rynocroftdigitalstudio/15min" target="_blank" rel="noopener noreferrer" data-cal-link="rynocroftdigitalstudio/15min" data-cal-config='{"layout":"month_view"}' class="inline-flex items-center justify-center border border-navy/30 text-charcoal font-semibold text-sm px-6 py-3 rounded-full hover:border-navy transition-colors">
           Discuss Your Requirements
-        </button>
+        </a>
         <a href="mailto:hello@rynocroft.com" class="inline-flex items-center justify-center text-slate hover:text-gold font-semibold text-sm px-6 py-3 transition-colors">
           hello@rynocroft.com
         </a>
@@ -398,12 +398,14 @@
   <!-- ============ SCRIPTS ============ -->
   <script>
     // ======================================================================
-    // CONFIG — the one place to update once your Cal.com account is live.
-    // This is the part of your Cal.com URL that comes after "cal.com/",
-    // e.g. for https://cal.com/rynocroftdigitalstudio/15min, use exactly:
-    //   "rynocroftdigitalstudio/15min"
+    // CONFIG — Cal.com event link. Every "Discuss Your Requirements" link
+    // on this page is a real <a href="https://cal.com/rynocroftdigitalstudio/15min">
+    // with data-cal-link/data-cal-config already set in the HTML, so
+    // booking works even if the embed script below fails to load — Cal's
+    // script just upgrades the click into an inline popup when it loads
+    // successfully. Update both the href and the data-cal-link value on
+    // each link if the event ever changes.
     // ======================================================================
-    const CAL_LINK = "rynocroftdigitalstudio/15min";
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -471,13 +473,6 @@
       layout: "month_view",
     });
 
-    // Every button marked data-open-modal opens Cal.com's official popup —
-    // same mechanism used sitewide for the "Discuss Your Requirements" /
-    // qualification call.
-    document.querySelectorAll('[data-open-modal]').forEach((el) => {
-      el.setAttribute('data-cal-link', CAL_LINK);
-      el.setAttribute('data-cal-config', '{"layout":"month_view"}');
-    });
   </script>
 
 </body>

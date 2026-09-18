@@ -117,9 +117,9 @@
         <a href="#pricing" class="w-full sm:w-auto bg-navy text-cream font-semibold px-8 py-4 rounded-full hover:bg-charcoal transition-colors shadow-lg shadow-navy/10">
           Explore Email Marketing
         </a>
-        <button data-open-modal class="w-full sm:w-auto text-center border border-navy/30 text-charcoal font-semibold px-8 py-4 rounded-full hover:border-navy transition-colors">
+        <a href="https://cal.com/rynocroftdigitalstudio/15min" target="_blank" rel="noopener noreferrer" data-cal-link="rynocroftdigitalstudio/15min" data-cal-config='{"layout":"month_view"}' class="w-full sm:w-auto text-center border border-navy/30 text-charcoal font-semibold px-8 py-4 rounded-full hover:border-navy transition-colors">
           Discuss Your Campaign
-        </button>
+        </a>
       </div>
       <p class="text-sm text-slate/70 italic">Written in your voice. Built around your offer. Designed to move prospects toward action.</p>
     </div>
@@ -195,9 +195,9 @@
           <li class="flex gap-2"><span class="text-gold">&#10003;</span>Brand voice &amp; tone alignment</li>
           <li class="flex gap-2"><span class="text-gold">&#10003;</span>Single offer or service focus</li>
         </ul>
-        <button data-open-modal class="w-full text-center border border-navy text-charcoal font-semibold px-6 py-3 rounded-full hover:bg-navy hover:text-cream transition-colors">
+        <a href="https://cal.com/rynocroftdigitalstudio/15min" target="_blank" rel="noopener noreferrer" data-cal-link="rynocroftdigitalstudio/15min" data-cal-config='{"layout":"month_view"}' class="w-full text-center border border-navy text-charcoal font-semibold px-6 py-3 rounded-full hover:bg-navy hover:text-cream transition-colors">
           Start With $997
-        </button>
+        </a>
       </div>
 
       <!-- Package 2 (Most Popular) -->
@@ -215,9 +215,9 @@
           <li class="flex gap-2"><span class="text-gold">&#10003;</span>Written in your exact brand voice</li>
           <li class="flex gap-2"><span class="text-gold">&#10003;</span>1 round of performance revisions included</li>
         </ul>
-        <button data-open-modal class="w-full text-center bg-gold text-navy font-semibold px-6 py-3 rounded-full hover:bg-cream transition-colors">
+        <a href="https://cal.com/rynocroftdigitalstudio/15min" target="_blank" rel="noopener noreferrer" data-cal-link="rynocroftdigitalstudio/15min" data-cal-config='{"layout":"month_view"}' class="w-full text-center bg-gold text-navy font-semibold px-6 py-3 rounded-full hover:bg-cream transition-colors">
           Explore the Full Campaign Build
-        </button>
+        </a>
       </div>
 
       <!-- Package 3 -->
@@ -230,9 +230,9 @@
           <li class="flex gap-2"><span class="text-gold">&#10003;</span>Monthly performance analytics &amp; conversion reporting</li>
           <li class="flex gap-2"><span class="text-gold">&#10003;</span>Dedicated copywriting &amp; campaign adjustments</li>
         </ul>
-        <button data-open-modal class="w-full text-center border border-navy text-charcoal font-semibold px-6 py-3 rounded-full hover:bg-navy hover:text-cream transition-colors">
+        <a href="https://cal.com/rynocroftdigitalstudio/15min" target="_blank" rel="noopener noreferrer" data-cal-link="rynocroftdigitalstudio/15min" data-cal-config='{"layout":"month_view"}' class="w-full text-center border border-navy text-charcoal font-semibold px-6 py-3 rounded-full hover:bg-navy hover:text-cream transition-colors">
           Explore Ongoing Support
-        </button>
+        </a>
       </div>
 
     </div>
@@ -244,9 +244,9 @@
     <div class="max-w-2xl mx-auto">
       <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-cream mb-6">Have a Specific Campaign in Mind?</h2>
       <p class="text-cream/75 mb-9 leading-relaxed">If you already know what you need, let's talk about your campaign directly.</p>
-      <button data-open-modal class="bg-gold text-navy font-semibold px-8 py-4 rounded-full hover:bg-cream transition-colors">
+      <a href="https://cal.com/rynocroftdigitalstudio/15min" target="_blank" rel="noopener noreferrer" data-cal-link="rynocroftdigitalstudio/15min" data-cal-config='{"layout":"month_view"}' class="inline-block bg-gold text-navy font-semibold px-8 py-4 rounded-full hover:bg-cream transition-colors">
         Discuss Your Campaign
-      </button>
+      </a>
     </div>
   </section>
 
@@ -266,7 +266,10 @@
 
   <!-- ============ SCRIPTS ============ -->
   <script>
-    const CAL_LINK = "rynocroftdigitalstudio/15min";
+    // Cal.com event link: every "Discuss Your Campaign" / package button
+    // above is a real <a href="https://cal.com/rynocroftdigitalstudio/15min">
+    // with data-cal-link/data-cal-config already set in the HTML, so
+    // booking works even if the embed script below fails to load.
 
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -326,11 +329,6 @@
       styles: { branding: { brandColor: "#0A1128" } },
       hideEventTypeDetails: false,
       layout: "month_view",
-    });
-
-    document.querySelectorAll('[data-open-modal]').forEach((el) => {
-      el.setAttribute('data-cal-link', CAL_LINK);
-      el.setAttribute('data-cal-config', '{"layout":"month_view"}');
     });
   </script>
 
