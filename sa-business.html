@@ -538,6 +538,18 @@
 
         guideForm.classList.add('hidden');
         guideFormSuccess.classList.remove('hidden');
+        if (!guideFormSuccess.querySelector('.guide-download-link')) {
+  guideFormSuccess.insertAdjacentHTML('beforeend', `
+    <p style="margin-top: 24px;">
+      <a href="https://rynocroft.com/ryno-croft-business-handbook-volume-1_1.pdf"
+         download
+         class="guide-download-link"
+         style="display:inline-block; padding:12px 28px; background:#1a2942; color:#fff; text-decoration:none; border-radius:6px; font-weight:bold;">
+        Download Your Free Guide
+      </a>
+    </p>
+  `);
+}
       } catch (err) {
         guideFormError.textContent = err.message || 'Something went wrong. Please try again or email hello@rynocroft.com directly.';
         guideFormError.classList.remove('hidden');

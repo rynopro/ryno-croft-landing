@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Solutions for Small Businesses | Ryno Croft Digital Studio</title>
+<meta name="description" content="Practical business problem-solving, research, audits and implementation for small businesses, entrepreneurs and startups. Go deeper with a 30-minute Business Solutions Session.">
+<link rel="canonical" href="https://rynocroft.com/business-solutions">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#FDFBF7',
+          navy: '#0A1128',
+          gold: '#C5A059',
+          slate: '#1F2937',
+          charcoal: '#0F172A',
+        },
+        fontFamily: {
+          serif: ['"Playfair Display"', 'serif'],
+          sans: ['"Inter"', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  html { font-family: 'Inter', sans-serif; }
+  .font-serif { font-family: 'Playfair Display', serif; }
+  body { background-color: #FDFBF7; color: #1F2937; }
+
+  /* Mobile nav slide */
+  #mobileMenu { transition: max-height 0.3s ease; }
+
+  /* Gold underline accent used on section eyebrows */
+  .eyebrow {
+    letter-spacing: 0.12em;
+  }
+
+  ::selection { background: #C5A059; color: #0A1128; }
+</style>
+<script src="https://app.cal.com/embed/embed.js"></script>
+<style>.cal-embed{border:0px;min-height:300px;margin:0 auto;width:100%;display:block!important;color-scheme:unset!important}</style>
+</head>
+
+<body class="bg-cream text-slate antialiased">
+
+  <!-- ============ HEADER (shared site header, links point back to homepage sections) ============ -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-cream/90 backdrop-blur border-b border-navy/10">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+      <a href="/" class="font-serif text-lg sm:text-xl tracking-wide text-charcoal font-semibold">
+        RYNO CROFT <span class="text-gold">DIGITAL STUDIO</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate">
+        <a href="/#growth-club" class="hover:text-gold transition-colors">Business Growth Club</a>
+        <a href="/email-marketing.html" class="hover:text-gold transition-colors">Email Marketing</a>
+        <a href="/authority-audit.html" class="hover:text-gold transition-colors">Authority Audit</a>
+        <a href="/#how-it-works" class="hover:text-gold transition-colors">How It Works</a>
+        <a href="/#pricing" class="hover:text-gold transition-colors">Pricing</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="https://wa.me/27817004443?text=Hi%20Ryno%20Croft%20Studio%2C%20I%27d%20like%20to%20talk%20through%20a%20business%20problem." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-emerald-600 text-emerald-700 font-semibold text-sm px-4 py-2.5 rounded-full hover:bg-emerald-50 transition-colors">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm5.8 14.1c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.12.11-1.8-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.15.12.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.18 1.53 1.91 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.16-.19.68-.79.87-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.26.13.43.19.5.3.06.11.06.63-.18 1.31z"></path></svg>
+          WhatsApp Us
+        </a>
+        <a href="https://cal.com/rynocroftdigitalstudio/30min" target="_blank" rel="noopener noreferrer" data-cal-link="rynocroftdigitalstudio/30min" data-cal-config='{"layout":"month_view"}' class="bg-navy text-cream font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-charcoal transition-colors">
+          Book a Call
+        </a>
+      </div>
+
+      <!-- Mobile toggle -->
+      <button id="mobileMenuBtn" class="lg:hidden flex flex-col justify-center items-center w-10 h-10" aria-label="Toggle menu" aria-expanded="false">
+        <span class="block w-6 h-0.5 bg-charcoal mb-1.5 transition-transform" id="barTop"></span>
+        <span class="block w-6 h-0.5 bg-charcoal mb-1.5 transition-opacity" id="barMid"></span>
+        <span class="block w-6 h-0.5 bg-charcoal transition-transform" id="barBot"></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="lg:hidden overflow-hidden max-h-0 bg-cream border-b border-navy/10">
+      <div class="px-5 pb-6 pt-2 flex flex-col gap-4 text-sm font-medium">
+        <a href="/#growth-club" class="py-1">Business Growth Club</a>
+        <a href="/email-marketing.html" class="py-1">Email Marketing</a>
+        <a href="/authority-audit.html" class="py-1">Authority Audit</a>
+        <a href="/#how-it-works" class="py-1">How It Works</a>
+        <a href="/#pricing" class="py-1">Pricing</a>
+        <a href="https://wa.me/27817004443?text=Hi%20Ryno%20Croft%20Studio%2C%20I%27d%20like%20to%20talk%20through%20a%20business%20problem." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 border border-emerald-600 text-emerald-700 font-semibold px-4 py-2.5 rounded-full mt-2">
+          WhatsApp Us
+        </a>
+        <a href="https://cal.com/rynocroftdigitalstudio/30min" target="_blank" rel="noopener noreferrer" data-cal-link="rynocroftdigitalstudio/30min" data-cal-config='{"layout":"month_view"}' class="inline-flex items-center justify-center bg-navy text-cream font-semibold px-5 py-2.5 rounded-full">
+          Book a Call
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ============ SECTION 1 — HERO ============ -->
+  <section id="top" class="pt-40 pb-24 px-5 sm:px-8 bg-cream">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="eyebrow text-gold font-semibold text-xs sm:text-sm uppercase mb-5">Practical Business Solutions</p>
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold text-charcoal leading-tight mb-6">
+        From Business Problem to Practical Solution
+      </h1>
+      <p class="text-base sm:text-lg font-medium text-charcoal max-w-2xl mx-auto mb-4 leading-relaxed">
+        Already know you want to go deeper than a quick chat? This is the next step.
+      </p>
+      <p class="text-base sm:text-lg text-slate max-w-2xl mx-auto mb-9 leading-relaxed">
+        Not every business problem needs another subscription, another complicated system or another generic service. Sometimes you simply need someone to look at what's happening, understand the problem and help you work out what needs to happen next. The 30-Minute Business Solutions Session is a focused, paid follow-through for business owners who want to move straight from identifying a problem to mapping out a practical solution.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
+        <a href="https://cal.com/rynocroftdigitalstudio/30min" target="_blank" rel="noopener noreferrer" data-cal-link="rynocroftdigitalstudio/30min" data-cal-config='{"layout":"month_view"}' class="w-full sm:w-auto text-center bg-navy text-cream font-semibold px-8 py-4 rounded-full hover:bg-charcoal transition-colors shadow-lg shadow-navy/10">
+          Book a 30-Minute Business Solutions Session
+        </a>
+        <a href="#commercial-ladder" class="w-full sm:w-auto text-center border border-navy/30 text-charcoal font-semibold px-8 py-4 rounded-full hover:border-navy transition-colors">
+          See How It Works
+        </a>
+      </div>
+      <p class="text-sm text-slate/70">30 minutes · R150 fixed · Payment link sent after booking</p>
+      <p class="text-sm text-slate/70 mt-2">Not ready to pay yet? <a href="/business-problem-consultation" class="text-gold font-semibold hover:underline">Start with the free 15-minute consultation</a> instead.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2 — THE APPROACH ============ -->
+  <section class="py-24 px-5 sm:px-8 bg-white">
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-charcoal mb-5">We Don't Start With a Package. We Start With the Problem.</h2>
+      <p class="text-slate font-medium leading-relaxed mb-5">
+        You don't need to know exactly what service you need before you contact Ryno Croft. Start with the problem. We'll look at what is happening, what may be causing it, and whether there is a practical way we can help.
+      </p>
+      <p class="text-slate leading-relaxed">
+        Every business is different. One business may need help understanding why its online presence isn't generating enough enquiries. Another may need customer or competitor research. Another may need help putting a practical process in place. Another may simply need an experienced second opinion before deciding what to do next. That's why Ryno Croft takes a problem-first approach.
+      </p>
+    </div>
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row sm:items-stretch justify-center gap-2 sm:gap-0 mb-10">
+      <div class="flex-1 bg-cream border border-navy/10 rounded-2xl p-8 text-center">
+        <p class="eyebrow text-gold font-semibold text-xs uppercase mb-3">01</p>
+        <h3 class="font-serif text-xl font-semibold text-charcoal mb-3">Discover</h3>
+        <p class="text-slate text-sm leading-relaxed">Understand what's happening and identify the actual problem.</p>
+      </div>
+      <div class="flex sm:flex-col items-center justify-center text-gold text-2xl px-3 py-2" aria-hidden="true">
+        <span class="sm:hidden">↓</span><span class="hidden sm:inline">→</span>
+      </div>
+      <div class="flex-1 bg-cream border border-navy/10 rounded-2xl p-8 text-center">
+        <p class="eyebrow text-gold font-semibold text-xs uppercase mb-3">02</p>
+        <h3 class="font-serif text-xl font-semibold text-charcoal mb-3">Define</h3>
+        <p class="text-slate text-sm leading-relaxed">Determine what needs to be done and what a useful outcome would look like.</p>
+      </div>
+      <div class="flex sm:flex-col items-center justify-center text-gold text-2xl px-3 py-2" aria-hidden="true">
+        <span class="sm:hidden">↓</span><span class="hidden sm:inline">→</span>
+      </div>
+      <div class="flex-1 bg-cream border border-navy/10 rounded-2xl p-8 text-center">
+        <p class="eyebrow text-gold font-semibold text-xs uppercase mb-3">03</p>
+        <h3 class="font-serif text-xl font-semibold text-charcoal mb-3">Deliver</h3>
+        <p class="text-slate text-sm leading-relaxed">Where appropriate, Ryno Croft can research, build, implement or organise the solution.</p>
+      </div>
+    </div>
+    <p class="text-center text-sm font-semibold text-charcoal max-w-2xl mx-auto">The objective is not to sell you something you don't need. It's to find a practical way forward.</p>
+  </section>
+
+  <!-- ============ SECTION 3 — THE COMMERCIAL LADDER (visual centrepiece) ============ -->
+  <section id="commercial-ladder" class="scroll-mt-20 py-24 px-5 sm:px-8 bg-cream">
+    <div class="max-w-3xl mx-auto text-center mb-6">
+      <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-charcoal mb-5">Different Problems Need Different Levels of Help</h2>
+      <p class="text-slate leading-relaxed">
+        Not every business needs a large project. Some problems can be clarified through a simple audit or piece of research. Others require implementation, ongoing support or a more comprehensive project.
+      </p>
+    </div>
+    <div class="max-w-3xl mx-auto text-center mb-6">
+      <p class="eyebrow text-gold font-semibold text-xs sm:text-sm uppercase">Solutions Session &nbsp;→&nbsp; Audit &nbsp;→&nbsp; Project &nbsp;→&nbsp; Larger Project &nbsp;→&nbsp; Ongoing &nbsp;→&nbsp; Product</p>
+    </div>
+    <div class="max-w-2xl mx-auto text-center mb-14">
+      <p class="text-slate text-sm leading-relaxed">These are different ways Ryno Croft can help — not mandatory stages. There is no requirement to move from one level to the next. Some businesses may only need advice. Others may need a focused project or hands-on implementation. The right level of help depends on the problem.</p>
+    </div>
+
+    <div class="max-w-4xl mx-auto relative">
+      <div class="hidden sm:block absolute left-6 top-2 bottom-2 w-px bg-navy/15"></div>
+
+      <div class="space-y-8">
+
+        <!-- LEVEL 1 — 30-MINUTE BUSINESS SOLUTIONS SESSION (paid) -->
+        <div class="relative sm:pl-20">
+          <span class="hidden sm:flex absolute left-0 top-0 w-12 h-12 rounded-full bg-navy text-cream items-center justify-center font-serif font-semibold">1</span>
+          <div class="bg-white border border-navy/10 rounded-2xl p-8">
+            <p class="eyebrow text-gold font-semibold text-xs uppercase mb-3">Level 1 — Business Solutions Session</p>
+            <h3 class="font-serif text-xl font-semibold text-charcoal mb-1">30-Minute Business Solutions Session</h3>
+            <p class="text-sm text-slate/60 mb-4">30 minutes · R150 fixed · Payment link sent after booking</p>
+            <p class="text-slate text-sm leading-relaxed mb-4">A focused, paid session for business owners who want to go straight into mapping out a practical solution — not just a quick chat. It's the natural next step after a free consultation, or a direct starting point if you already know you want a deeper conversation. We'll explore:</p>
+            <ul class="text-sm text-slate space-y-2 mb-6">
+              <li class="flex gap-2"><span class="text-gold">✓</span>What's frustrating you</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Where you're losing time, money or opportunities</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>What you've already tried</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>What you'd like to improve</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Whether there is a practical way forward</li>
+            </ul>
+            <p class="text-sm text-slate/70 italic mb-5">R150 fixed fee. Once you've booked, you'll receive a secure payment link (Yoco or Capitec) — nothing is charged automatically.</p>
+            <a href="https://cal.com/rynocroftdigitalstudio/30min" target="_blank" rel="noopener noreferrer" data-cal-link="rynocroftdigitalstudio/30min" data-cal-config='{"layout":"month_view"}' class="inline-block bg-navy text-cream font-semibold text-sm px-6 py-3 rounded-full hover:bg-charcoal transition-colors mb-3">
+              Book the 30-Minute Session
+            </a>
+            <p class="text-sm text-slate/70">Prefer to start with something free first? <a href="/business-problem-consultation" class="text-gold font-semibold hover:underline">Book the free 15-minute consultation</a> instead.</p>
+          </div>
+        </div>
+
+        <!-- LEVEL 2 — BUSINESS AUDIT -->
+        <div class="relative sm:pl-20">
+          <span class="hidden sm:flex absolute left-0 top-0 w-12 h-12 rounded-full bg-navy text-cream items-center justify-center font-serif font-semibold">2</span>
+          <div class="bg-white border border-navy/10 rounded-2xl p-8">
+            <p class="eyebrow text-gold font-semibold text-xs uppercase mb-3">Level 2 — Business Audit</p>
+            <h3 class="font-serif text-xl font-semibold text-charcoal mb-3">Business Problem / Online Presence Audit</h3>
+            <p class="text-slate text-sm leading-relaxed mb-4">A closer look at the relevant part of the business, online presence, process or problem so that the situation can be properly understood before recommending a solution. Potential areas may include:</p>
+            <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-slate mb-4">
+              <li class="flex gap-2"><span class="text-gold">✓</span>Online presence</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Website</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Customer journey</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Lead generation</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Follow-up processes</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Competitor positioning</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Business processes</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Digital visibility</li>
+            </ul>
+            <p class="text-sm text-slate/70 italic mb-5">The scope depends on the specific problem — not every audit covers every area above.</p>
+            <p class="text-sm font-semibold text-charcoal mb-5">Pricing depends on the scope of the audit.</p>
+            <a href="/business-problem-consultation" class="inline-block border border-navy text-charcoal font-semibold text-sm px-6 py-3 rounded-full hover:bg-navy hover:text-cream transition-colors">
+              Discuss an Audit
+            </a>
+          </div>
+        </div>
+
+        <!-- LEVEL 3 — SPECIFIC SOLUTION -->
+        <div class="relative sm:pl-20">
+          <span class="hidden sm:flex absolute left-0 top-0 w-12 h-12 rounded-full bg-navy text-cream items-center justify-center font-serif font-semibold">3</span>
+          <div class="bg-white border border-navy/10 rounded-2xl p-8">
+            <p class="eyebrow text-gold font-semibold text-xs uppercase mb-3">Level 3 — Specific Solution</p>
+            <h3 class="font-serif text-xl font-semibold text-charcoal mb-3">Targeted Business Solution</h3>
+            <p class="text-slate text-sm leading-relaxed mb-4">A clearly defined project designed to address a particular problem. Sometimes the problem is clear and the solution can be implemented as a focused project. Examples may include:</p>
+            <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-slate mb-4">
+              <li class="flex gap-2"><span class="text-gold">✓</span>Research</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Business documentation</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Customer research</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Competitor research</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Website/content improvements</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Lead follow-up systems</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Basic business processes</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Digital setup</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Templates and business resources</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Other clearly defined implementation work</li>
+            </ul>
+            <p class="text-sm text-slate/70 italic mb-5">Depending on the problem identified, a focused project may involve one or more of these areas.</p>
+            <p class="text-sm font-semibold text-charcoal">Fixed project fee based on scope.</p>
+          </div>
+        </div>
+
+        <!-- LEVEL 4 — LARGER BUSINESS PROJECT -->
+        <div class="relative sm:pl-20">
+          <span class="hidden sm:flex absolute left-0 top-0 w-12 h-12 rounded-full bg-navy text-cream items-center justify-center font-serif font-semibold">4</span>
+          <div class="bg-white border border-navy/10 rounded-2xl p-8">
+            <p class="eyebrow text-gold font-semibold text-xs uppercase mb-3">Level 4 — Research, Strategy &amp; Implementation</p>
+            <h3 class="font-serif text-xl font-semibold text-charcoal mb-3">Larger Business Project</h3>
+            <p class="text-slate text-sm leading-relaxed mb-4">For problems that require deeper research, planning and hands-on implementation. Some problems require more than a quick fix — Ryno Croft can potentially undertake a more comprehensive project involving research, strategy, planning and implementation. Examples could include:</p>
+            <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-slate mb-4">
+              <li class="flex gap-2"><span class="text-gold">✓</span>Detailed business research</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Competitor analysis</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Customer research</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Digital presence planning</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Business process development</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Content and communication systems</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Lead-generation processes</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Website/content projects</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Multi-stage implementation</li>
+            </ul>
+            <p class="text-sm text-slate/70 italic mb-5">Not every project includes every item above — the scope is determined after understanding the business problem.</p>
+            <p class="text-sm font-semibold text-charcoal">Quoted according to scope and complexity.</p>
+          </div>
+        </div>
+
+        <!-- LEVEL 5 — ONGOING SUPPORT -->
+        <div class="relative sm:pl-20">
+          <span class="hidden sm:flex absolute left-0 top-0 w-12 h-12 rounded-full bg-navy text-cream items-center justify-center font-serif font-semibold">5</span>
+          <div class="bg-white border border-navy/10 rounded-2xl p-8">
+            <p class="eyebrow text-gold font-semibold text-xs uppercase mb-3">Level 5 — Ongoing Support</p>
+            <h3 class="font-serif text-xl font-semibold text-charcoal mb-3">Ongoing Support &amp; Implementation</h3>
+            <p class="text-slate text-sm leading-relaxed mb-4">Where a business needs continuing assistance after the initial project. Some businesses don't need a one-off project — they need someone who can continue helping them implement improvements. Potential arrangements may include:</p>
+            <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-slate mb-4">
+              <li class="flex gap-2"><span class="text-gold">✓</span>Ongoing research</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Content support</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Process improvement</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Digital implementation</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Project support</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Regular strategic reviews</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Other agreed business support</li>
+            </ul>
+            <p class="text-sm font-semibold text-charcoal">Monthly — based on agreed scope and level of involvement.</p>
+          </div>
+        </div>
+
+        <!-- LEVEL 6 — PRODUCTS -->
+        <div class="relative sm:pl-20">
+          <span class="hidden sm:flex absolute left-0 top-0 w-12 h-12 rounded-full bg-navy text-cream items-center justify-center font-serif font-semibold">6</span>
+          <div class="bg-white border border-navy/10 rounded-2xl p-8">
+            <p class="eyebrow text-gold font-semibold text-xs uppercase mb-3">Level 6 — Products &amp; Resources</p>
+            <h3 class="font-serif text-xl font-semibold text-charcoal mb-3">Practical Business Resources</h3>
+            <p class="text-slate text-sm leading-relaxed mb-4">Where a recurring problem can be turned into a practical guide, template, toolkit, system or DIY resource. When a solution becomes repeatable, Ryno Croft may turn it into a product that businesses can implement themselves. These could include:</p>
+            <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-slate mb-5">
+              <li class="flex gap-2"><span class="text-gold">✓</span>Templates</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Guides</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Checklists</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Workbooks</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Business toolkits</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>DIY systems</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Research resources</li>
+              <li class="flex gap-2"><span class="text-gold">✓</span>Digital products</li>
+            </ul>
+            <p class="text-slate text-sm leading-relaxed">Not every solution needs a consultant. Where a problem can be solved through a practical resource, Ryno Croft may develop a product that allows business owners to implement the solution themselves — and the product range will grow out of real business problems encountered through the consultation and project process.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 4 — HOW PRICING WORKS ============ -->
+  <section class="py-24 px-5 sm:px-8 bg-white">
+    <div class="max-w-3xl mx-auto text-center mb-10">
+      <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-charcoal mb-5">Clear Scope. Clear Pricing. No Guesswork.</h2>
+      <p class="text-slate leading-relaxed mb-4">
+        There are no fixed packages or public price lists for this type of work. Ryno Croft does not want you paying for services you don't need.
+      </p>
+      <p class="text-slate leading-relaxed">
+        Once we've understood the problem, I'll explain what I believe needs to be done, what you'll receive and what it will cost. Depending on the situation, this may be:
+      </p>
+    </div>
+    <div class="max-w-3xl mx-auto grid sm:grid-cols-2 gap-4 mb-10">
+      <div class="bg-cream border border-navy/10 rounded-2xl px-6 py-5 text-center text-charcoal font-medium text-sm">A fixed-price audit</div>
+      <div class="bg-cream border border-navy/10 rounded-2xl px-6 py-5 text-center text-charcoal font-medium text-sm">A fixed-price project</div>
+      <div class="bg-cream border border-navy/10 rounded-2xl px-6 py-5 text-center text-charcoal font-medium text-sm">A larger scoped engagement</div>
+      <div class="bg-cream border border-navy/10 rounded-2xl px-6 py-5 text-center text-charcoal font-medium text-sm">An ongoing monthly arrangement</div>
+    </div>
+    <div class="max-w-2xl mx-auto border-l-4 border-gold bg-cream rounded-r-2xl px-6 py-5 space-y-2">
+      <p class="text-charcoal font-medium leading-relaxed text-center sm:text-left">Where possible, the work will be quoted as a clear, fixed-price project. You will know what is being done, what you will receive and what it will cost before work begins.</p>
+      <p class="text-charcoal font-medium leading-relaxed text-center sm:text-left">Nothing moves into paid work until the scope and price have been agreed.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 5 — ADVICE VS IMPLEMENTATION ============ -->
+  <section class="py-24 px-5 sm:px-8 bg-cream">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-charcoal mb-5">Sometimes You Don't Need More Advice. You Need Help Getting It Done.</h2>
+      <p class="text-slate leading-relaxed mb-4">
+        Sometimes the answer is simply understanding what needs to change. Sometimes you already know what needs to happen but don't have the time, resources or expertise to do it yourself.
+      </p>
+      <p class="text-slate leading-relaxed">
+        Where Ryno Croft can genuinely add value, the work can move from advice into practical implementation — but not every consultation leads to paid work, and that's fine.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 6 — YOU'RE NOT COMMITTING TO A PROJECT ============ -->
+  <section class="py-24 px-5 sm:px-8 bg-white">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-charcoal mb-5">You're Not Committing to a Project</h2>
+      <p class="text-slate leading-relaxed mb-4">
+        The 30-minute Business Solutions Session is a paid, focused conversation — not a project commitment. You pay the R150 session fee and receive practical input either way. You can take the recommendations and implement them yourself.
+      </p>
+      <p class="text-slate leading-relaxed">
+        If a bigger project makes sense and Ryno Croft is able to help, I'll explain what I recommend and give you a clear proposal. If there isn't a good fit, there is no obligation to continue beyond the session.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 7 — WHY THIS APPROACH? ============ -->
+  <section class="py-24 px-5 sm:px-8 bg-cream">
+    <div class="max-w-3xl mx-auto text-center mb-14">
+      <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-charcoal">Why Start With the Problem?</h2>
+    </div>
+    <div class="max-w-5xl mx-auto grid sm:grid-cols-2 gap-6">
+      <div class="bg-white border border-navy/10 rounded-2xl p-8">
+        <h3 class="font-serif text-lg font-semibold text-charcoal mb-3">You may not need a large project</h3>
+        <p class="text-slate text-sm leading-relaxed">Sometimes a focused audit or small implementation is enough.</p>
+      </div>
+      <div class="bg-white border border-navy/10 rounded-2xl p-8">
+        <h3 class="font-serif text-lg font-semibold text-charcoal mb-3">You may already have some of the answers</h3>
+        <p class="text-slate text-sm leading-relaxed">The goal isn't to replace what you know. It's to help identify what's missing.</p>
+      </div>
+      <div class="bg-white border border-navy/10 rounded-2xl p-8">
+        <h3 class="font-serif text-lg font-semibold text-charcoal mb-3">You may need research before making a decision</h3>
+        <p class="text-slate text-sm leading-relaxed">Good decisions often require better information first.</p>
+      </div>
+      <div class="bg-white border border-navy/10 rounded-2xl p-8">
+        <h3 class="font-serif text-lg font-semibold text-charcoal mb-3">You may need implementation rather than more advice</h3>
+        <p class="text-slate text-sm leading-relaxed">If the solution is clear but you don't have the time or resources to implement it, a project may be appropriate.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 8 — EXAMPLE JOURNEY ============ -->
+  <section class="py-24 px-5 sm:px-8 bg-navy">
+    <div class="max-w-3xl mx-auto text-center mb-14">
+      <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-cream mb-3">Example Journey</h2>
+      <p class="text-cream/75 leading-relaxed">How a typical engagement might develop — with no automatic progression into a larger, more expensive service.</p>
+    </div>
+
+    <div class="max-w-md mx-auto text-center space-y-3 mb-10">
+      <p class="text-cream font-medium">Problem</p>
+      <p class="text-gold text-xl" aria-hidden="true">↓</p>
+      <p class="text-cream font-medium">Understand</p>
+      <p class="text-gold text-xl" aria-hidden="true">↓</p>
+      <p class="text-cream font-medium">Choose the Level of Help</p>
+      <p class="text-gold text-xl" aria-hidden="true">↓</p>
+    </div>
+
+    <div class="max-w-3xl mx-auto text-center mb-10">
+      <p class="eyebrow text-gold font-semibold text-xs uppercase mb-4">Possible Examples</p>
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <span class="inline-block bg-cream/10 border border-gold/40 text-gold font-semibold text-sm px-5 py-2.5 rounded-full">Do It Yourself</span>
+        <span class="inline-block bg-cream/10 border border-gold/40 text-gold font-semibold text-sm px-5 py-2.5 rounded-full">Small Audit</span>
+        <span class="inline-block bg-cream/10 border border-gold/40 text-gold font-semibold text-sm px-5 py-2.5 rounded-full">Focused Project</span>
+        <span class="inline-block bg-cream/10 border border-gold/40 text-gold font-semibold text-sm px-5 py-2.5 rounded-full">Larger Project</span>
+        <span class="inline-block bg-cream/10 border border-gold/40 text-gold font-semibold text-sm px-5 py-2.5 rounded-full">Ongoing Support</span>
+      </div>
+    </div>
+
+    <div class="max-w-md mx-auto text-center space-y-3 mb-10">
+      <p class="text-gold text-xl" aria-hidden="true">↓</p>
+      <p class="text-cream font-medium">Implement</p>
+      <p class="text-gold text-xl" aria-hidden="true">↓</p>
+      <p class="text-cream font-medium">Review</p>
+    </div>
+
+    <p class="max-w-2xl mx-auto text-center text-cream/75 text-sm leading-relaxed">Every business problem is different. The appropriate level of help depends on what we discover during the initial conversation and, where necessary, further research.</p>
+  </section>
+
+  <!-- ============ SECTION 9 — WHO THIS IS FOR ============ -->
+  <section class="py-24 px-5 sm:px-8 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-charcoal mb-5">Built for Businesses That Need Practical Help</h2>
+        <p class="text-slate leading-relaxed max-w-2xl mx-auto">Ryno Croft's business problem-solving approach is intended primarily for:</p>
+      </div>
+      <ul class="max-w-xl mx-auto text-slate space-y-3 mb-10">
+        <li class="flex gap-2"><span class="text-gold">✓</span>Owner-managed small businesses</li>
+        <li class="flex gap-2"><span class="text-gold">✓</span>Entrepreneurs</li>
+        <li class="flex gap-2"><span class="text-gold">✓</span>Startups</li>
+        <li class="flex gap-2"><span class="text-gold">✓</span>Service-based businesses</li>
+        <li class="flex gap-2"><span class="text-gold">✓</span>Businesses going through a change or growth phase</li>
+        <li class="flex gap-2"><span class="text-gold">✓</span>Owners who have identified a problem but aren't sure what to do next</li>
+      </ul>
+      <div class="max-w-2xl mx-auto border-l-4 border-gold bg-cream rounded-r-2xl px-6 py-5">
+        <p class="text-charcoal font-medium leading-relaxed">You don't need to know exactly what service you need before starting the conversation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 10 — CTA / FINAL MESSAGE ============ -->
+  <section class="py-24 px-5 sm:px-8 bg-navy text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-cream mb-6">Ready to Go Deeper?</h2>
+      <p class="text-cream/75 mb-2 leading-relaxed">Book a focused 30-minute Business Solutions Session.</p>
+      <p class="text-cream/75 mb-9 leading-relaxed">Tell me what's not working, what's frustrating you or what you're trying to achieve — and we'll map out a practical next step.</p>
+      <a href="https://cal.com/rynocroftdigitalstudio/30min" target="_blank" rel="noopener noreferrer" data-cal-link="rynocroftdigitalstudio/30min" data-cal-config='{"layout":"month_view"}' class="inline-block bg-gold text-navy font-semibold px-8 py-4 rounded-full hover:bg-cream transition-colors">
+        Book My 30-Minute Session
+      </a>
+      <p class="text-sm text-cream/60 mt-5">30 minutes · R150 fixed · Payment link sent after booking</p>
+      <p class="text-sm text-cream/60 mt-3">Not ready to pay yet? <a href="/business-problem-consultation" class="text-gold font-semibold hover:underline">Start with the free 15-minute consultation</a> instead.</p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============ FOOTER (existing site footer, unchanged) ============ -->
+  <footer class="py-10 px-5 sm:px-8 bg-cream border-t border-navy/10">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate/60">
+      <p class="font-serif text-charcoal">RYNO CROFT <span class="text-gold">DIGITAL STUDIO</span></p>
+      <div class="flex items-center gap-5">
+        <a class="hover:text-gold transition-colors" href="/privacy">Privacy Policy</a>
+        <a class="hover:text-gold transition-colors" href="/terms">Terms</a>
+      </div>
+      <p>© <span id="year">2026</span> Ryno Croft Digital Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    let menuOpen = false;
+    mobileBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      mobileMenu.style.maxHeight = menuOpen ? mobileMenu.scrollHeight + 'px' : '0px';
+      mobileBtn.setAttribute('aria-expanded', String(menuOpen));
+    });
+    // Close mobile menu after tapping a link
+    mobileMenu.querySelectorAll('a, button').forEach((el) => {
+      el.addEventListener('click', () => {
+        menuOpen = false;
+        mobileMenu.style.maxHeight = '0px';
+        mobileBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ======================================================================
+    // Cal.com booking popup — uses Cal.com's own official embed script.
+    // Every CTA on this page is a real link to the 30-minute Cal.com event
+    // (https://cal.com/rynocroftdigitalstudio/30min), so booking still works
+    // even if this script fails to load. When it loads successfully, Cal's
+    // embed script upgrades those same links into an inline popup calendar.
+    // ======================================================================
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["initNamespace", namespace]);
+          } else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+
+    Cal("init", { origin: "https://cal.com" });
+    Cal("ui", {
+      theme: "light",
+      styles: { branding: { brandColor: "#0A1128" } },
+      hideEventTypeDetails: false,
+      layout: "month_view",
+    });
+  </script>
+
+</body>
+</html>
