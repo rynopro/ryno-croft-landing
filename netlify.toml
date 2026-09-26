@@ -152,3 +152,28 @@
   from = "/terms/*"
   to = "/terms.html"
   status = 301
+
+# ---------------------------------------------------------------------------
+# Authority Content service — pretty, nested URLs for the three package
+# pages. These are rewrites (status 200), not redirects: the URL in the
+# address bar stays as the clean nested path while Netlify serves the
+# matching flat .html file behind the scenes. /authority-content itself
+# needs no entry here — Netlify's default pretty-URL resolution already
+# serves authority-content.html for that path, the same way it already
+# serves sa-business.html for /sa-business.
+# ---------------------------------------------------------------------------
+
+[[redirects]]
+  from = "/authority-content/foundation"
+  to = "/authority-content-foundation.html"
+  status = 200
+
+[[redirects]]
+  from = "/authority-content/authority"
+  to = "/authority-content-authority.html"
+  status = 200
+
+[[redirects]]
+  from = "/authority-content/thought-leadership"
+  to = "/authority-content-thought-leadership.html"
+  status = 200
