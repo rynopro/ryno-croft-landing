@@ -66,14 +66,22 @@
         RYNO CROFT <span class="text-gold">DIGITAL STUDIO</span>
       </a>
 
-      <nav class="hidden lg:flex items-center gap-5 text-sm font-medium text-slate">
-        <a href="#growth-club" class="hover:text-gold transition-colors">Business Growth Club</a>
-        <a href="/authority-content" class="hover:text-gold transition-colors">Authority Content</a>
-        <a href="#email-marketing" class="hover:text-gold transition-colors">Email Marketing</a>
-        <a href="#authority-audit" class="hover:text-gold transition-colors">Authority Audit</a>
-        <a href="#how-it-works" class="hover:text-gold transition-colors">How It Works</a>
-        <a href="#pricing" class="hover:text-gold transition-colors">Pricing</a>
-        <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate">
+        <a href="#growth-club" class="whitespace-nowrap hover:text-gold transition-colors">Business Growth Club</a>
+        <div class="relative">
+          <button type="button" id="servicesDropdownBtn" aria-expanded="false" aria-haspopup="true" class="flex items-center gap-1 whitespace-nowrap hover:text-gold transition-colors">
+            Services
+            <svg id="servicesChevron" class="w-3.5 h-3.5 transition-transform" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path></svg>
+          </button>
+          <div id="servicesMenu" class="hidden absolute left-0 top-full mt-2 w-56 bg-white border border-navy/10 rounded-xl shadow-lg py-2 z-50">
+            <a href="/authority-content" class="block px-4 py-2.5 hover:bg-cream hover:text-gold transition-colors">Authority Content</a>
+            <a href="#email-marketing" class="block px-4 py-2.5 hover:bg-cream hover:text-gold transition-colors">Email Marketing</a>
+            <a href="#authority-audit" class="block px-4 py-2.5 hover:bg-cream hover:text-gold transition-colors">Authority Audit</a>
+          </div>
+        </div>
+        <a href="#how-it-works" class="whitespace-nowrap hover:text-gold transition-colors">How It Works</a>
+        <a href="#pricing" class="whitespace-nowrap hover:text-gold transition-colors">Pricing</a>
+        <a href="#contact" class="whitespace-nowrap hover:text-gold transition-colors">Contact</a>
       </nav>
 
       <div class="hidden lg:flex items-center gap-3">
@@ -455,6 +463,37 @@
         mobileBtn.setAttribute('aria-expanded', 'false');
       });
     });
+
+    // Desktop "Services" nav dropdown (Authority Content / Email Marketing / Authority Audit)
+    const servicesBtn = document.getElementById('servicesDropdownBtn');
+    const servicesMenu = document.getElementById('servicesMenu');
+    const servicesChevron = document.getElementById('servicesChevron');
+    if (servicesBtn && servicesMenu) {
+      const closeServicesMenu = () => {
+        servicesMenu.classList.add('hidden');
+        servicesBtn.setAttribute('aria-expanded', 'false');
+        servicesChevron.style.transform = '';
+      };
+      servicesBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = !servicesMenu.classList.contains('hidden');
+        if (isOpen) {
+          closeServicesMenu();
+        } else {
+          servicesMenu.classList.remove('hidden');
+          servicesBtn.setAttribute('aria-expanded', 'true');
+          servicesChevron.style.transform = 'rotate(180deg)';
+        }
+      });
+      document.addEventListener('click', (e) => {
+        if (!servicesMenu.classList.contains('hidden') && !servicesMenu.contains(e.target) && e.target !== servicesBtn) {
+          closeServicesMenu();
+        }
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeServicesMenu();
+      });
+    }
 
     // ======================================================================
     // Cal.com booking popup — uses Cal.com's own official embed script.
