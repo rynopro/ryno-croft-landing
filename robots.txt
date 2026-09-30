@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /growth-club-thank-you.html
 
-Sitemap: https://rynocroftstudio.netlify.app/sitemap.xml
+Sitemap: https://rynocroft.com/sitemap.xml
