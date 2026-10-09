@@ -1,0 +1,70 @@
+{
+  "_note": "All samples are original illustrative writing created for this website. They are not commissioned client work. No statistics, testimonials or outcome claims. Each is clearly labelled on the page.",
+  "samples": [
+    {
+      "id": "dental-linkedin",
+      "audience": "dental",
+      "kind": "LinkedIn post",
+      "title": "A practice owner explains the six-month check-up",
+      "rawIdea": "We explain to patients why regular check-ups matter, but we don't communicate that well online.",
+      "notes": "Plain language, no scare tactics, no promises about outcomes. A clinician would confirm the clinical wording before it goes out.",
+      "body": [
+        "Most of what I do at a check-up is look for small things.",
+        "A filling that has begun to wear at the edge. A bit of gum that looks slightly different from last time. A change that is easy to miss when you are the one looking in the mirror every morning.",
+        "None of it is dramatic. That is rather the point. Small things are usually simpler to deal with when we find them early, and a visit where nothing needs doing is a perfectly good visit.",
+        "I understand why people put check-ups off. Life is busy, nothing hurts, and it is easy to assume that no news is good news. But comfort and health are not always the same thing, and some changes are quiet.",
+        "So here is how I think about it. A check-up is less like a repair appointment and more like a regular conversation. We look, we compare with last time, and we talk about what you have noticed.",
+        "If you have been meaning to book one, this is your sign to open the calendar.",
+        "What question about your own dental care would you like someone to answer plainly?"
+      ]
+    },
+    {
+      "id": "dental-newsletter",
+      "audience": "dental",
+      "kind": "Patient newsletter excerpt",
+      "title": "\"Do I really need a check-up if nothing hurts?\"",
+      "rawIdea": "Patients often skip appointments when there is no pain. We want a friendly newsletter piece that answers this without lecturing.",
+      "notes": "Written to the practice's voice. General information only. The practice reviews and approves every clinical statement before publication.",
+      "body": [
+        "It is one of the questions we hear most often, and it is a fair one. If nothing hurts, why come in?",
+        "The short answer is that pain is not always the first sign of a problem. Many dental concerns start quietly. By the time something feels uncomfortable, there may be more to treat than there would have been earlier on.",
+        "A routine visit gives us the chance to look at the whole picture: your teeth, your gums, the way your bite is wearing, and anything that has changed since last time. It also gives you the chance to ask the small questions that never feel worth a phone call.",
+        "How often you should come in depends on you. Some people are well served by a visit every six months, while others benefit from a different rhythm. We will tell you what we recommend and why, and you are always welcome to ask us to explain it.",
+        "If it has been a while, there is no judgment from us. Book a time, tell us what you would like to understand, and we will take it from there."
+      ]
+    },
+    {
+      "id": "realestate-linkedin",
+      "audience": "realestate",
+      "kind": "LinkedIn thought-leadership post",
+      "title": "Buying a place is also choosing a way of living there",
+      "rawIdea": "Luxury buyers are not just buying a property. They're choosing a location and a lifestyle.",
+      "notes": "Opinion drawn from professional experience, with no statistics and no claims about buyer behavior in general. The agent would add a real local example before publishing.",
+      "body": [
+        "Some of the best conversations I have with buyers never mention square footage.",
+        "They start with a question like: what does a Saturday look like for you?",
+        "One person describes a long breakfast and a walk to the water. Another talks about hosting friends, and how far everyone has to drive to get home. Someone else says they simply want mornings that feel quiet.",
+        "Those answers tell me more about the right home than any list of features. A beautiful house can still be the wrong fit if the street, the commute or the neighborhood does not suit the life being planned inside it.",
+        "So I try to keep two lists open at once. One is the property: the light, the layout, the finish, the condition. The other is the place: what is nearby, what the area is like on a weekday evening, and what it asks of you.",
+        "When both lists agree, the decision usually feels calm. When they do not, it is better to say so early.",
+        "What is the first question you ask a buyer who says they are not sure what they want?"
+      ]
+    },
+    {
+      "id": "realestate-newsletter",
+      "audience": "realestate",
+      "kind": "Market commentary newsletter excerpt",
+      "title": "Three questions I would ask before you list this spring",
+      "rawIdea": "Sellers keep asking me whether now is a good time to list. I don't want to give them a hollow answer or quote numbers I can't back up.",
+      "notes": "This sample deliberately contains no market statistics. In a real engagement, any local figures would be supplied by the agent or taken from a source cited in the piece.",
+      "body": [
+        "\"Is now a good time to sell?\" is the question I hear most, and I have learned to answer it with three questions of my own.",
+        "First: what is your timeline? Some sellers have a move to make by a certain date. Others can wait for the right buyer. The answer changes how I would price and present the home.",
+        "Second: what has changed about the home since you bought it? Updates, repairs and the things you have stopped noticing all matter. A fresh set of eyes is useful here, and I am happy to walk through it with you.",
+        "Third: what does a good outcome look like for you? For some people it is the highest possible price. For others it is certainty, privacy or a smooth handover.",
+        "Once we have those answers, I can talk about the current market in your neighborhood, using recent comparable sales that we look at together. Until then, any general answer from me would be a guess.",
+        "If you are thinking about listing, reply to this email and tell me where you are in the process. I will respond personally."
+      ]
+    }
+  ]
+}

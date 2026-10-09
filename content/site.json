@@ -1,0 +1,17 @@
+{
+  "name": "Ryno Croft",
+  "domain": "https://rynocroft.com",
+  "author": "Ryno Cilliers",
+  "tagline": "Make your expertise impossible to ignore.",
+  "email": "hello@rynocroft.com",
+  "calLink": "https://cal.com/rynocroftdigitalstudio/15min",
+  "formName": "enquiry",
+  "_note": "Nothing in this file is a secret. Contact details were taken from the existing site. Cal.com link is the existing 15-minute event.",
+  "nav": [
+    { "label": "Dental", "href": "/dental-content" },
+    { "label": "Luxury Real Estate", "href": "/luxury-real-estate-content" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Insights", "href": "/insights" },
+    { "label": "About", "href": "/about" }
+  ]
+}

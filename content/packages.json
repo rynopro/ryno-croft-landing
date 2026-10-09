@@ -1,0 +1,101 @@
+{
+  "_status": "PROPOSED. Quantities, word counts and the missing prices below need Ryno's approval before this goes live. Set price to a string such as \"$600\" once approved; set paymentLink only after verifying the link matches this package and amount.",
+  "priceFallback": "Fixed price confirmed in writing before any work begins",
+  "paymentFallback": "Payment terms are stated in your written scope. No payment is taken through this website.",
+  "deliveryFallback": "Delivery date is confirmed in your written scope before work starts",
+  "packages": [
+    {
+      "id": "essential",
+      "name": "Essential Content",
+      "purpose": "A straightforward way for a busy professional to publish useful content consistently.",
+      "price": null,
+      "paymentLink": null,
+      "delivery": null,
+      "included": [
+        "8 short-form posts (LinkedIn or practice/agent social), about 120 to 220 words each",
+        "One agreed audience and one primary platform",
+        "A headline or opening hook, and a clear call to action where relevant, for every post",
+        "One consistent tone of voice, agreed at the start",
+        "Written intake form plus your notes, voice notes or existing material",
+        "One revision round",
+        "Editable files (Google Doc or Word)"
+      ],
+      "details": {
+        "Research": "Light fact-checking against sources you supply or point me to. No original market or clinical research.",
+        "Interviews and briefings": "Written intake and voice notes. A live interview is not included.",
+        "Images and graphics": "Not included.",
+        "Publishing and scheduling": "Not included. You publish the posts yourself.",
+        "Revisions": "One round, requested within 7 days of delivery."
+      },
+      "clientProvides": "A completed intake form, 8 topics or questions you would like covered (or I will propose them), and your review of any clinical or market-specific statements.",
+      "excluded": [
+        "Publishing, scheduling or account management",
+        "Graphic design or image sourcing",
+        "Email platform setup",
+        "Legal, clinical or financial advice"
+      ]
+    },
+    {
+      "id": "authority",
+      "name": "Authority Content",
+      "purpose": "A stronger, more recognizable body of expertise-led content with a consistent editorial direction.",
+      "price": null,
+      "paymentLink": null,
+      "delivery": null,
+      "included": [
+        "12 short-form posts, about 120 to 220 words each",
+        "1 longer piece: an article or email newsletter, 700 to 1,000 words",
+        "3 to 4 content themes with a stated purpose for each piece",
+        "Headlines, hooks and a clear call to action where relevant for every piece",
+        "A 20 to 30 minute briefing call or voice-note briefing",
+        "One revision round",
+        "Editable files (Google Doc or Word)"
+      ],
+      "details": {
+        "Research": "Fact-checking against sources you supply or point me to, plus basic public-source checks for the longer piece.",
+        "Interviews and briefings": "One 20 to 30 minute briefing call or voice-note briefing.",
+        "Images and graphics": "Not included.",
+        "Publishing and scheduling": "Not included.",
+        "Revisions": "One round across the batch, requested within 7 days of delivery."
+      },
+      "clientProvides": "A completed intake form, the briefing, and your review of any clinical or market-specific statements.",
+      "excluded": [
+        "Publishing, scheduling or account management",
+        "Graphic design or image sourcing",
+        "Email platform setup or list management",
+        "Original market data, statistics or clinical research"
+      ]
+    },
+    {
+      "id": "thought-leadership",
+      "name": "Thought Leadership",
+      "purpose": "Deeper expertise communicated through a planned mix of short and long-form pieces.",
+      "price": null,
+      "paymentLink": null,
+      "delivery": null,
+      "included": [
+        "16 short-form posts, about 120 to 220 words each",
+        "2 longer pieces (articles or newsletters), 900 to 1,200 words each",
+        "A written editorial plan covering themes, audiences and the order of publication",
+        "Consistent tone and messaging across every piece",
+        "A 45 minute briefing interview",
+        "One revision round",
+        "Editable files (Google Doc or Word)"
+      ],
+      "details": {
+        "Research": "Fact-checking against supplied sources plus public-source checks for the longer pieces. Claims that cannot be verified are flagged or removed.",
+        "Interviews and briefings": "One 45 minute briefing interview, plus written intake.",
+        "Images and graphics": "Not included.",
+        "Publishing and scheduling": "Not included.",
+        "Revisions": "One round across the batch, requested within 7 days of delivery."
+      },
+      "clientProvides": "A completed intake form, the interview, any data or source material you want used, and your review of any clinical or market-specific statements.",
+      "excluded": [
+        "Publishing, scheduling or account management",
+        "Graphic design or image sourcing",
+        "Email platform setup or list management",
+        "Ongoing monthly production (this is a one-off project)"
+      ]
+    }
+  ]
+}
