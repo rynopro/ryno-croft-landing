@@ -22,22 +22,22 @@
 
 [[redirects]]
   from = "/dental-cosmetic/*"
-  to = "/#dental"
+  to = "/dental-content"
   status = 301
 
 [[redirects]]
   from = "/luxury-realtors/*"
-  to = "/#realestate"
+  to = "/luxury-real-estate-content"
   status = 301
 
 [[redirects]]
   from = "/luxury-real-estate"
-  to = "/#realestate"
+  to = "/luxury-real-estate-content"
   status = 301
 
 [[redirects]]
   from = "/campaigns/*"
-  to = "/#pricing"
+  to = "/services"
   status = 301
 
 [[redirects]]
@@ -114,22 +114,22 @@
 
 [[redirects]]
   from = "/about/*"
-  to = "/"
+  to = "/about"
   status = 301
 
 [[redirects]]
   from = "/contact/*"
-  to = "/"
+  to = "/contact"
   status = 301
 
 [[redirects]]
   from = "/book-a-call/*"
-  to = "/"
+  to = "/contact"
   status = 301
 
 [[redirects]]
   from = "/book-call"
-  to = "/"
+  to = "/contact"
   status = 301
 
 [[redirects]]
