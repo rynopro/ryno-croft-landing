@@ -105,20 +105,20 @@ function sampleCard(s) {
   </div></article>`;
 }
 function packageCard(p, link = true) {
-  const price = p.price ? esc(p.price) : esc(pk.priceFallback);
   const details = Object.entries(p.details).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('');
   return `<div class="card pkg" id="${p.id}"><h3>${esc(p.name)}</h3><p>${esc(p.purpose)}</p>
-  <p class="price">${price}</p>
+  <p class="price">${esc(p.price)} <span class="small">founding client price for your 30-day pilot</span></p>
+  <p class="small">Standard rate: ${esc(p.standardRate)} per month</p>
   <h4 style="margin:.8rem 0 .4rem">What is included</h4>${ticks(p.included)}
   <dl>${details}
-  <dt>Delivery</dt><dd>${esc(p.delivery || pk.deliveryFallback)}</dd>
-  <dt>Payment</dt><dd>${esc(pk.paymentFallback)}</dd>
+  <dt>Delivery</dt><dd>${esc(p.delivery)}, counted from your payment and completed intake</dd>
+  <dt>Payment</dt><dd>${esc(p.payment)}</dd>
   <dt>What you provide</dt><dd>${esc(p.clientProvides)}</dd></dl>
   <h4 style="margin:1rem 0 .4rem">Not included</h4>${ticks(p.excluded, 'cross')}
   ${link ? cta(`/contact?package=${p.id}`, `Enquire about ${p.name}`) : ''}</div>`;
 }
 function pkgSummary() {
-  return `<div class="grid g3">${pk.packages.map((p) => `<div class="card"><h3>${esc(p.name)}</h3><p>${esc(p.purpose)}</p>${ticks(p.included.slice(0, 3))}<a href="/services#${p.id}">See full details</a></div>`).join('')}</div>`;
+  return `<div class="grid g3">${pk.packages.map((p) => `<div class="card"><h3>${esc(p.name)}</h3><p>${esc(p.purpose)}</p><p class="price">${esc(p.price)} <span class="small">founding client price, 30-day pilot</span></p>${ticks(p.included.slice(0, 3))}<a href="/services#${p.id}">See full details</a></div>`).join('')}</div>`;
 }
 const processSteps = `<ol class="steps">
 <li><strong>Choose your audience and content package</strong>Pick the package that fits, or ask which one suits you.</li>
@@ -130,11 +130,13 @@ const faqs = [
   ['Do you use AI to write the content?', 'AI tools may help with organizing research, suggesting angles or producing rough drafts. Every piece is then reviewed and edited by a person, checked against what you told me, and reshaped until it sounds like you. I do not sell raw AI output.'],
   ['Will it sound like me?', 'That is the aim. The intake form, your notes and any voice recordings are used to match your tone. The revision round exists so you can bring anything that does not sound right back to me.'],
   ['Do you give clinical or market advice?', 'No. I write up what you know. Any clinical statement is approved by the practitioner before it is final, and any local market claim comes from you or from a source named in the piece. I do not invent statistics, results or client stories.'],
-  ['How long does it take?', 'Each package has a delivery date that is confirmed in your written scope before work starts. I would rather give you an accurate date than a fast-sounding one.'],
+  ['How long does it take?', 'Seven business days for Essential Brand, ten for Authority Growth and fifteen for Thought Leadership. The clock starts when I have both your payment (or deposit) and your completed intake form.'],
   ['What if I want changes?', 'Every package includes one revision round, requested within 7 days of delivery. Larger changes of direction can be scoped separately.'],
   ['Do you publish or schedule the content?', 'No. You receive editable files and publish them yourself. Graphic design, social media management and email platform setup are not included.'],
   ['Where are you based?', 'I work from Cape Town, South Africa, and serve clients in the United States remotely. Briefing calls can be arranged around both time zones.'],
-  ['What does it cost?', 'Each package is a fixed-scope, one-off project. The price and payment terms are confirmed in writing before any work begins, and no payment is taken through this website.'],
+  ['What does it cost?', 'Each package starts as a 30-day paid pilot at a founding client price: $600, $1,250 or $2,500. The standard monthly rates are $950, $1,800 and $4,000. You are invoiced in US dollars by PayPal, and no payment is taken through this website.'],
+  ['What happens after the 30-day pilot?', 'You choose. You can continue month to month on a retainer at the same scope, or stop. Nothing renews automatically, and retainer terms are agreed in writing. A 10% discount on the monthly rate applies if you commit to 3 or 6 months in advance.'],
+  ['Do you need patient or client information?', 'No. I write from your expertise, not from records. Please do not send patient or client names, records or photos. Nothing that identifies a patient or client appears in a piece unless you confirm you hold their written consent.'],
 ];
 const faqHtml = `<div>${faqs.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}</div>`;
 const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) };
@@ -204,7 +206,7 @@ layout({
   <p class="eyebrow">A straightforward process</p>
   <h2>Five steps from first message to finished content.</h2>
   ${processSteps}
-  <p style="margin-top:1.6rem">After you approve the scope and payment is made, I send the intake form and start once I have your briefing material. Delivery dates are confirmed in your written scope. Each package includes one revision round.</p>
+  <p style="margin-top:1.6rem">Once you approve the written scope and pay (in full for Essential Brand, or a 50% deposit for the others), I send the intake form. Delivery times are counted from when I have both your payment and your completed intake. Each package includes one revision round.</p>
 </div></section>
 
 <section><div class="wrap">
@@ -218,7 +220,7 @@ layout({
 <section class="alt"><div class="wrap">
   <p class="eyebrow">Service packages</p>
   <h2>Three ways to work together.</h2>
-  <p class="lede">Each package is a fixed-scope, one-off project, with deliverables and exclusions spelled out in advance.</p>
+  <p class="lede">Each package starts as a 30-day paid pilot, with the deliverables, price and exclusions spelled out in advance. If it works for you, you can continue month to month.</p>
   ${pkgSummary()}
   <div class="btns">${cta('/services', 'Compare packages in detail')}</div>
 </div></section>
@@ -256,9 +258,9 @@ audiencePage({
   problems: ['You are busy treating patients and cannot write consistently', 'Your website and social posts read like those of the practice down the road', 'You have clinical knowledge but struggle to make it engaging for patients', 'You want to explain your approach to care in an approachable way', 'You need steady material for newsletters, LinkedIn and your website', 'You want writing that feels professional and human, not machine-made'],
   problemClose: 'That is the gap Ryno Croft fills: your knowledge in, clear writing out.',
   deliverH: 'Content built from your ideas and your experience.',
-  deliver: ['Patient education articles and FAQ content', 'Educational social media posts', 'LinkedIn content for practice owners', 'Practice newsletters', 'Website articles', 'Pieces drawn from your own explanations, notes and voice recordings'],
+  deliver: ['Patient education articles and FAQ content', 'Educational social media posts', 'LinkedIn content for practice owners', 'Practice newsletters', 'Website articles', 'LinkedIn content for recruiting associates and hygienists and building your standing among peers', 'Pieces drawn from your own explanations, notes and voice recordings'],
   guardH: 'Clinical content is always approved by you.',
-  guard: 'Ryno Croft writes up what you know. It does not give medical advice on your behalf, invent clinical expertise, or publish unverified treatment information. Any clinical statement is flagged for your review, and nothing is final until you approve it. Claims that cannot be supported are removed.',
+  guard: 'Ryno Croft writes up what you know. It does not give medical advice on your behalf, invent clinical expertise, or publish unverified treatment information. Any clinical statement is flagged for your review, and nothing is final until you approve it. Claims that cannot be supported are removed. Please do not send patient names, records or photos: nothing that identifies a patient appears in any piece unless you confirm you hold their written consent.',
   sampleH: 'Two pieces, from raw idea to finished writing.', samples: dentalSamples,
   finalH: 'Your next patient education piece might already be in your head.', finalT: 'Tell me about your practice and what you wish patients understood better.',
 });
@@ -274,7 +276,7 @@ audiencePage({
   problems: ['Your online presence does not show your experience or personal value', 'Your social media leans heavily on property listings', 'Your market commentary lacks a recognizable individual voice', 'You have local knowledge but struggle to turn it into compelling writing', 'You need to stay visible and credible between transactions', 'You want to stand out without sounding boastful or overly promotional'],
   problemClose: 'Ryno Croft turns your observations into confident, readable pieces that sound like you.',
   deliverH: 'Content built from your local knowledge and judgment.',
-  deliver: ['LinkedIn thought-leadership posts', 'Local market commentary', 'Buyer and seller educational articles', 'Email newsletters', 'Personal-brand articles', 'Pieces built around your professional observations and lessons learned'],
+  deliver: ['LinkedIn thought-leadership posts', 'Local market commentary', 'Buyer and seller educational articles', 'Email newsletters', 'Personal-brand articles', 'Team-building and agent-recruitment posts for brokers and team leaders', 'Pieces built around your professional observations and lessons learned', 'Instagram and Facebook caption adaptation and carousel slide copy (an add-on, quoted separately)'],
   guardH: 'Market claims come from you or a named source.',
   guard: 'Ryno Croft does not invent property statistics, market trends, client stories, transaction values or performance claims. Any figure in your content comes from information you supply or from a source named in the piece, and you approve everything before it is final.',
   sampleH: 'Two pieces, from raw idea to finished writing.', samples: reSamples,
@@ -289,14 +291,15 @@ layout({
   ld: { json: [orgLd] },
   body: `
 <section class="hero"><div class="wrap"><p class="eyebrow">Services and pricing</p><h1>Know exactly what you are buying.</h1>
-<p class="lede">Three one-off packages for dental practitioners and luxury real estate professionals. Each states what is included, what is not, and what happens after you order. These are fixed-scope projects, not monthly subscriptions.</p></div></section>
+<p class="lede">Three packages for dental practitioners and luxury real estate professionals. Each starts as a 30-day paid pilot, with what is included and what is not spelled out below. If it works for you, you can continue month to month, or stop.</p></div></section>
 <section class="alt"><div class="wrap"><div class="grid g3">${pk.packages.map((p) => packageCard(p)).join('')}</div>
-<p class="small" style="margin-top:1.4rem">Package contents are the same for both audiences. The topics, examples and tone are tailored to your profession.</p></div></section>
+<p class="small" style="margin-top:1.4rem">Package contents are the same for both audiences. The topics, examples and tone are tailored to your profession. Prices are in US dollars.</p></div></section>
+<section><div class="wrap narrow"><p class="eyebrow">Pilot, retainer and founding pricing</p><h2>How the pricing works.</h2>${ticks([pk.pilotSummary, pk.foundingNote, pk.retainerDiscount, pk.clockStart, pk.intakeNote, 'Add-ons such as Instagram and Facebook caption adaptation and carousel slide copy are quoted separately in your scope. Design, scheduling and publishing are not offered.'])}</div></section>
 <section><div class="wrap narrow"><p class="eyebrow">How to order</p><h2>No sales call required.</h2>
 <ol class="steps">
 <li><strong>Send a short enquiry</strong>Choose a package on the <a href="/contact">contact form</a> and tell me what you need.</li>
 <li><strong>Receive a written scope</strong>You get the deliverables, the fixed price, the delivery date and the payment terms in writing. Nothing starts until you agree.</li>
-<li><strong>Approve and pay</strong>Payment follows the terms in your scope. No payment is taken through this website.</li>
+<li><strong>Approve and pay</strong>You are invoiced in US dollars by PayPal: in full for Essential Brand, or a 50% deposit for the other packages. No payment is taken through this website.</li>
 <li><strong>Complete the intake and share your material</strong>I send the intake form, then collect your notes, recordings or briefing.</li>
 <li><strong>Review and revise</strong>You receive editable files and can request one revision round within 7 days of delivery.</li></ol>
 <h3 style="margin-top:2rem">What happens to clinical or market-specific claims?</h3>
