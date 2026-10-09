@@ -303,8 +303,6 @@ layout({
 <p>They are flagged for your confirmation. Anything that cannot be verified is changed or removed before delivery.</p>
 <h3>AI use</h3>
 <p>AI tools may assist with research organization, ideas or rough drafts. All finished work is reviewed and edited by a person.</p></div></section>
-<section class="alt"><div class="wrap narrow"><p class="eyebrow">Other services</p><h2>Looking for something different?</h2>
-<p>Ryno Croft Digital Studio also offers <a href="/authority-content">research-led B2B articles</a>, <a href="/email-marketing.html">email marketing campaigns</a> and an <a href="/authority-audit.html">authority audit</a>. They are separate from the packages above and keep their own terms.</p></div></section>
 ${finalCta('Not sure which package fits?', 'Send a short enquiry and I will recommend one, with no obligation.', '/contact', 'Start an enquiry')}
 `});
 
@@ -393,7 +391,7 @@ layout({
 });
 
 // ---- sitemap + robots ----
-const legacy = ['/authority-content', '/email-marketing', '/authority-audit', '/sa-business', '/privacy', '/terms']; // clean URLs, matching the Sept 30 sitemap edits
+const legacy = ['/privacy', '/terms']; // legal pages only; older service pages are intentionally not promoted
 const urls = [...written.filter((w) => !w.noindex).map((w) => w.urlPath), ...legacy];
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${site.domain}${u === '/' ? '/' : u}</loc></url>`).join('\n')}\n</urlset>\n`);
 fs.writeFileSync(path.join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${site.domain}/sitemap.xml\n`);
