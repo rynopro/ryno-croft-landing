@@ -396,7 +396,7 @@ layout({
 });
 
 // ---- sitemap + robots ----
-const legacy = ['/authority-content', '/email-marketing.html', '/authority-audit.html', '/sa-business.html', '/privacy.html', '/terms.html'];
+const legacy = ['/authority-content', '/email-marketing', '/authority-audit', '/sa-business', '/privacy', '/terms']; // clean URLs, matching the Sept 30 sitemap edits
 const urls = [...written.filter((w) => !w.noindex).map((w) => w.urlPath), ...legacy];
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${site.domain}${u === '/' ? '/' : u}</loc></url>`).join('\n')}\n</urlset>\n`);
 fs.writeFileSync(path.join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${site.domain}/sitemap.xml\n`);
