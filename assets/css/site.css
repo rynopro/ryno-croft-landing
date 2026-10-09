@@ -30,6 +30,7 @@ section{padding:72px 0}
 .dark{background:var(--ink);color:#e9e6de}
 .dark h2,.dark h3{color:#fff}
 .dark .eyebrow{color:var(--gold)}
+.dark p,.dark .lede{color:#fff}
 .dark a{color:#fff}
 /* header */
 header.site{position:sticky;top:0;z-index:50;background:rgba(253,251,247,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
