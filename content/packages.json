@@ -73,8 +73,8 @@
       "id": "thought-leadership",
       "name": "Thought Leadership",
       "purpose": "Deeper expertise communicated through a planned mix of short and long-form content.",
-      "price": "$2,500",
-      "standardRate": "$4,000",
+      "price": "From $2,500",
+      "standardRate": "from $4,000",
       "delivery": "15 business days",
       "payment": "50% upfront and 50% on delivery, invoiced in US dollars by PayPal.",
       "included": [
@@ -99,7 +99,8 @@
         "Graphic design or image sourcing",
         "Email platform setup or list management",
         "Original market data, statistics or clinical research"
-      ]
+      ],
+      "priceNote": "Larger or customised scopes are quoted separately in your written scope."
     }
   ]
 }

@@ -108,7 +108,8 @@ function packageCard(p, link = true) {
   const details = Object.entries(p.details).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('');
   return `<div class="card pkg" id="${p.id}"><h3>${esc(p.name)}</h3><p>${esc(p.purpose)}</p>
   <p class="price">${esc(p.price)} <span class="small">founding client price for your 30-day pilot</span></p>
-  <p class="small">Standard rate: ${esc(p.standardRate)} per month</p>
+  <p class="small">Standard rate: ${esc(p.standardRate)} per month</p>${p.priceNote ? `
+  <p class="small">${esc(p.priceNote)}</p>` : ''}
   <h4 style="margin:.8rem 0 .4rem">What is included</h4>${ticks(p.included)}
   <dl>${details}
   <dt>Delivery</dt><dd>${esc(p.delivery)}, counted from your payment and completed intake</dd>
@@ -134,7 +135,7 @@ const faqs = [
   ['What if I want changes?', 'Every package includes one revision round, requested within 7 days of delivery. Larger changes of direction can be scoped separately.'],
   ['Do you publish or schedule the content?', 'No. You receive editable files and publish them yourself. Graphic design, social media management and email platform setup are not included.'],
   ['Where are you based?', 'I work from Cape Town, South Africa, and serve clients in the United States remotely. Briefing calls can be arranged around both time zones.'],
-  ['What does it cost?', 'Each package starts as a 30-day paid pilot at a founding client price: $600, $1,250 or $2,500. The standard monthly rates are $950, $1,800 and $4,000. You are invoiced in US dollars by PayPal, and no payment is taken through this website.'],
+  ['What does it cost?', 'Each package starts as a 30-day paid pilot at a founding client price: $600, $1,250, or from $2,500 for Thought Leadership. The standard monthly rates are $950, $1,800 and from $4,000. Larger or customised Thought Leadership scopes are quoted separately. You are invoiced in US dollars by PayPal, and no payment is taken through this website.'],
   ['What happens after the 30-day pilot?', 'You choose. You can continue month to month on a retainer at the same scope, or stop. Nothing renews automatically, and retainer terms are agreed in writing. A 10% discount on the monthly rate applies if you commit to 3 or 6 months in advance.'],
   ['Do you need patient or client information?', 'No. I write from your expertise, not from records. Please do not send patient or client names, records or photos. Nothing that identifies a patient or client appears in a piece unless you confirm you hold their written consent.'],
 ];
