@@ -5,6 +5,7 @@
 
 [functions]
   node_bundler = "esbuild"
+  included_files = ["protected/**"]
 
 [[headers]]
   for = "/*"
@@ -201,4 +202,11 @@
   from = "/wp-includes/*"
   to = "/404.html"
   status = 410
+  force = true
+
+# Paid PDFs: never served publicly (they are bundled into the download function only)
+[[redirects]]
+  from = "/protected/*"
+  to = "/404.html"
+  status = 404
   force = true
