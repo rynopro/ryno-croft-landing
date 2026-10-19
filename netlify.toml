@@ -210,3 +210,9 @@
   to = "/404.html"
   status = 404
   force = true
+
+# Retired Business Growth Club thank-you page: send visitors to the home page
+[[redirects]]
+  from = "/growth-club-thank-you"
+  to = "/"
+  status = 301
