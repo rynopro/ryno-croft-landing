@@ -391,7 +391,7 @@ layout({
 });
 
 // ---- sitemap + robots ----
-const legacy = ['/privacy', '/terms']; // legal pages only; older service pages are intentionally not promoted
+const legacy = ['/privacy', '/terms', '/website-content-pilot/', '/website-content-pilot/terms/']; // legal pages plus the hand-built Website Content Pilot pages; older service pages are intentionally not promoted
 const urls = [...written.filter((w) => !w.noindex).map((w) => w.urlPath), ...legacy];
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${site.domain}${u === '/' ? '/' : u}</loc></url>`).join('\n')}\n</urlset>\n`);
 fs.writeFileSync(path.join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${site.domain}/sitemap.xml\n`);
