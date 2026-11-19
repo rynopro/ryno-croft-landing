@@ -216,3 +216,10 @@
   from = "/growth-club-thank-you"
   to = "/"
   status = 301
+
+# Old WordPress staging product page: send to StageReady
+[[redirects]]
+  from = "/products/buyer-ready-staging-5-rooms"
+  to = "/stageready/"
+  status = 301
+  force = true
