@@ -5,6 +5,7 @@
 
 [functions]
   node_bundler = "esbuild"
+  included_files = ["protected/**"]
 
 [[headers]]
   for = "/*"
@@ -177,3 +178,48 @@
   from = "/authority-content/thought-leadership"
   to = "/authority-content-thought-leadership.html"
   status = 200
+
+# Retired URLs from old site versions: tell Google they are gone (410)
+[[redirects]]
+  from = "/pages/before-after-gallery"
+  to = "/404.html"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/recipes-single-page-layout/*"
+  to = "/404.html"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/products/listing-boost"
+  to = "/404.html"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/wp-includes/*"
+  to = "/404.html"
+  status = 410
+  force = true
+
+# Paid PDFs: never served publicly (they are bundled into the download function only)
+[[redirects]]
+  from = "/protected/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+# Retired Business Growth Club thank-you page: send visitors to the home page
+[[redirects]]
+  from = "/growth-club-thank-you"
+  to = "/"
+  status = 301
+
+# Old WordPress staging product page: send to StageReady
+[[redirects]]
+  from = "/products/buyer-ready-staging-5-rooms"
+  to = "/stageready/"
+  status = 301
+  force = true

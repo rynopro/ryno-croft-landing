@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Your download | Ryno Croft</title>
+</head>
+<body style="font-family:system-ui,sans-serif;max-width:40rem;margin:4rem auto;padding:0 1rem">
+  <h1>Thank you</h1>
+  <div id="status">Confirming your payment…</div>
+  <p style="color:#666;font-size:.9rem">Keep this page's link. It works for 7 days, up to 5 downloads.</p>
+  <script>
+    const order = new URLSearchParams(location.search).get("order");
+    const box = document.getElementById("status");
+    let tries = 0;
+    async function check() {
+      if (!order) { box.textContent = "Missing order reference."; return; }
+      try {
+        const d = await (await fetch("/api/order-status?order=" + encodeURIComponent(order), { cache: "no-store" })).json();
+        if (d.status === "paid") {
+          box.textContent = "";
+          const a = document.createElement("a");
+          a.href = "/api/download?order=" + encodeURIComponent(order);
+          a.textContent = "Download " + d.title + " (PDF)";
+          a.style.cssText = "display:inline-block;padding:.8rem 1.2rem;background:#111;color:#fff;border-radius:6px;text-decoration:none";
+          box.appendChild(a);
+          return;
+        }
+        if (d.status === "expired") { box.textContent = "This link has expired. Please contact us."; return; }
+        if (d.status === "unknown") { box.textContent = "Order not found."; return; }
+      } catch (e) {}
+      if (++tries > 40) { box.textContent = "Your payment is taking longer than usual to confirm. Refresh this page in a few minutes, or contact us."; return; }
+      setTimeout(check, 3000);
+    }
+    check();
+  </script>
+</body>
+</html>

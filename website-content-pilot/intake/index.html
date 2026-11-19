@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Intake | The Website Content Pilot</title>
+<style>
+:root{--bg:#0f1115;--panel:#171a21;--ink:#f2f3f5;--mute:#a4a9b4;--line:#2a2f3a;--accent:#f5b342;--accent-ink:#1a1304}
+@media (prefers-color-scheme:light){:root{--bg:#fafaf7;--panel:#fff;--ink:#16181d;--mute:#5a606c;--line:#e3e3dd;--accent:#d98e0b;--accent-ink:#fff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:680px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line);padding:16px 0}
+.brand{font-weight:700;letter-spacing:.02em;text-decoration:none;color:inherit}
+h1{font-size:clamp(28px,6vw,42px);line-height:1.1;margin:40px 0 12px;letter-spacing:-.02em}
+h2{font-size:20px;margin:36px 0 0;padding-top:20px;border-top:1px solid var(--line)}
+.lede{color:var(--mute);margin:0 0 28px}
+.steps{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:28px;font-size:15.5px;color:var(--mute)}
+.steps strong{color:var(--ink)}
+label{display:block;font-weight:600;margin:22px 0 6px}
+.hint{display:block;font-weight:400;color:var(--mute);font-size:14.5px;margin-top:2px}
+input,textarea{width:100%;font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+input:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+textarea{min-height:110px;resize:vertical}
+button{margin-top:28px;font:inherit;font-weight:700;background:var(--accent);color:var(--accent-ink);border:0;border-radius:10px;padding:14px 26px;cursor:pointer}
+button:hover{filter:brightness(1.08)}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.hp{position:absolute;left:-9999px}
+footer{color:var(--mute);font-size:14px;padding:40px 0 56px}
+footer a{color:inherit}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="/website-content-pilot/">RYNO CROFT</a></div></header>
+
+<main class="wrap">
+  <h1>Tell me what your article needs</h1>
+  <p class="lede">Complete the questionnaire below. Your 72-hour delivery period begins once I have confirmed your payment and received your completed intake and any required supporting information.</p>
+
+  <div class="steps">
+    <strong>Healthcare and dental practices:</strong> please share only information you are happy to see published. Any clinical information in your article must be approved by you before it goes live.
+  </div>
+
+  <form name="website-content-pilot-intake" method="POST" action="/website-content-pilot/intake/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="website-content-pilot-intake">
+    <p class="hp"><label>Don&rsquo;t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+    <h2 style="border-top:0;padding-top:0;margin-top:0">About you</h2>
+
+    <label for="name">Your name</label>
+    <input id="name" name="name" type="text" required autocomplete="name">
+
+    <label for="email">Email for delivery</label>
+    <input id="email" name="email" type="email" required autocomplete="email">
+
+    <label for="paypal">Name or email on your PayPal payment <span class="hint">So I can match your payment quickly.</span></label>
+    <input id="paypal" name="paypal-payer" type="text" required>
+
+    <h2>Your article</h2>
+
+    <label for="business">1. Business name <span class="hint">Your business name and website address (next field).</span></label>
+    <input id="business" name="q1-business-name" type="text" required autocomplete="organization">
+
+    <label for="website">Business website</label>
+    <input id="website" name="q1-business-website" type="text" inputmode="url" required autocomplete="url" placeholder="https://">
+
+    <label for="q2">2. What topic or customer question should the article address?</label>
+    <textarea id="q2" name="q2-topic" required></textarea>
+
+    <label for="q3">3. Who is the intended reader?</label>
+    <textarea id="q3" name="q3-reader" required></textarea>
+
+    <label for="q4">4. What important points, expertise or information should the article include? <span class="hint">Your own ideas, experience and facts are the foundation of the article. Please don&rsquo;t send anything you aren&rsquo;t free to publish.</span></label>
+    <textarea id="q4" name="q4-points" required></textarea>
+
+    <h2>Optional extras</h2>
+
+    <label for="existing">Link to existing website material</label>
+    <input id="existing" name="opt-existing-link" type="text" inputmode="url">
+
+    <label for="reference">Competitor or reference article</label>
+    <input id="reference" name="opt-reference-link" type="text" inputmode="url">
+
+    <label for="voice">Voice-note link <span class="hint">Loom, Google Drive (set to &ldquo;anyone with the link can view&rdquo;), Dropbox, or similar.</span></label>
+    <input id="voice" name="opt-voice-note-link" type="text" inputmode="url">
+
+    <label for="cta">Preferred call to action <span class="hint">For example: book a call, request a quote, or call the practice.</span></label>
+    <input id="cta" name="opt-preferred-cta" type="text">
+
+    <button type="submit">Submit my intake</button>
+  </form>
+</main>
+
+<footer>
+  <div class="wrap">Questions? <a href="mailto:hello@rynocroft.com">hello@rynocroft.com</a> &middot; <a href="/website-content-pilot/terms/">Terms</a> &middot; <a href="/privacy">Privacy</a></div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Intake | The 2-Hour Content Desk</title>
+<style>
+:root{--bg:#0f1115;--panel:#171a21;--ink:#f2f3f5;--mute:#a4a9b4;--line:#2a2f3a;--accent:#f5b342;--accent-ink:#1a1304}
+@media (prefers-color-scheme:light){:root{--bg:#fafaf7;--panel:#fff;--ink:#16181d;--mute:#5a606c;--line:#e3e3dd;--accent:#d98e0b;--accent-ink:#fff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:680px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line);padding:16px 0}
+.brand{font-weight:700;letter-spacing:.02em;text-decoration:none;color:inherit}
+h1{font-size:clamp(28px,6vw,42px);line-height:1.1;margin:40px 0 12px;letter-spacing:-.02em}
+.lede{color:var(--mute);margin:0 0 28px}
+.steps{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:28px;font-size:15.5px;color:var(--mute)}
+.steps strong{color:var(--ink)}
+label{display:block;font-weight:600;margin:22px 0 6px}
+.hint{display:block;font-weight:400;color:var(--mute);font-size:14.5px;margin-top:2px}
+input,textarea{width:100%;font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+input:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+textarea{min-height:110px;resize:vertical}
+button{margin-top:28px;font:inherit;font-weight:700;background:var(--accent);color:var(--accent-ink);border:0;border-radius:10px;padding:14px 26px;cursor:pointer}
+button:hover{filter:brightness(1.08)}
+.hp{position:absolute;left:-9999px}
+footer{color:var(--mute);font-size:14px;padding:40px 0 56px}
+footer a{color:inherit}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="/2-hour-content-desk/">RYNO CROFT</a></div></header>
+
+<main class="wrap">
+  <h1>Payment received &mdash; let&rsquo;s get your posts started</h1>
+  <p class="lede">Complete the 3 questions below and share your voice note. Your 24-hour delivery clock starts once I&rsquo;ve confirmed your payment and received both.</p>
+
+  <div class="steps">
+    <strong>Voice note tip:</strong> speak for 3&ndash;5 minutes, as if explaining the topic to a smart client over coffee. Share your stories, opinions and examples &mdash; don&rsquo;t worry about structure. I&rsquo;ll shape it.
+  </div>
+
+  <form name="content-desk-intake" method="POST" action="/2-hour-content-desk/intake/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="content-desk-intake">
+    <p class="hp"><label>Don&rsquo;t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+    <label for="name">Your name</label>
+    <input id="name" name="name" type="text" required autocomplete="name">
+
+    <label for="email">Email for delivery</label>
+    <input id="email" name="email" type="email" required autocomplete="email">
+
+    <label for="paypal">Name or email on your PayPal payment <span class="hint">So I can match your payment quickly.</span></label>
+    <input id="paypal" name="paypal-payer" type="text" required>
+
+    <label for="q1">1. Who do you help, and what do you want to be known for? <span class="hint">Your role or company, your ideal client, and the reputation you&rsquo;re building.</span></label>
+    <textarea id="q1" name="q1-audience-and-reputation" required></textarea>
+
+    <label for="q2">2. What should these posts achieve? <span class="hint">For example: attract clients, build authority, recruit, or announce something.</span></label>
+    <textarea id="q2" name="q2-goal" required></textarea>
+
+    <label for="q3">3. Anything I should include or avoid? <span class="hint">Topics, phrases, stories, competitors, or links to posts whose style you like.</span></label>
+    <textarea id="q3" name="q3-include-avoid"></textarea>
+
+    <label for="voice">Link to your voice note <span class="hint">Loom, Google Drive (set to &ldquo;anyone with the link can view&rdquo;), Dropbox, or similar. Prefer WhatsApp? Write &ldquo;WhatsApp&rdquo; and your number with country code, then send it to me there.</span></label>
+    <input id="voice" name="voice-note-link" type="text" required>
+
+    <button type="submit">Submit and start my 24 hours</button>
+  </form>
+</main>
+
+<footer>
+  <div class="wrap">Questions? <a href="mailto:hello@rynocroft.com">hello@rynocroft.com</a> &middot; <a href="/2-hour-content-desk/terms/">Terms</a> &middot; <a href="/2-hour-content-desk/privacy/">Privacy</a></div>
+</footer>
+</body>
+</html>
