@@ -117,6 +117,10 @@ label{font-weight:600;color:var(--ink);display:block;margin-bottom:.35rem}
 .hint{font-weight:400;color:var(--muted);font-size:.9rem}
 input,select,textarea{width:100%;font:inherit;padding:.8rem .9rem;border:1px solid #9aa2b0;border-radius:10px;background:#fff;color:var(--ink)}
 textarea{min-height:140px}
+.choices{border:0;padding:0;margin:0;display:grid;gap:10px}
+.choices legend{font-weight:600;color:var(--ink);margin-bottom:.35rem;padding:0}
+label.choice{display:flex;gap:.65rem;align-items:flex-start;font-weight:400;margin:0;padding:.7rem .9rem;border:1px solid #9aa2b0;border-radius:10px;background:#fff;cursor:pointer}
+label.choice input{width:auto;margin-top:.25rem;flex:none}
 .hp{position:absolute;left:-9999px;height:0;overflow:hidden}
 .msg{padding:14px 16px;border-radius:10px;display:none}
 .msg.show{display:block}
