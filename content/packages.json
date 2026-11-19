@@ -1,28 +1,30 @@
 {
-  "_status": "PROPOSED. Quantities, word counts and the missing prices below need Ryno's approval before this goes live. Set price to a string such as \"$600\" once approved; set paymentLink only after verifying the link matches this package and amount.",
-  "priceFallback": "Fixed price confirmed in writing before any work begins",
-  "paymentFallback": "Payment terms are stated in your written scope. No payment is taken through this website.",
-  "deliveryFallback": "Delivery date is confirmed in your written scope before work starts",
+  "_status": "APPROVED by Ryno on 2026-10-09 from the pricing recommendation. Edit prices, standard rates, delivery and payment here, then run: node scripts/build.mjs. No payment links are connected; clients are invoiced by PayPal in US dollars.",
+  "pilotSummary": "Each package starts as a 30-day paid pilot. If it works for you, you can continue month to month on a retainer at the same scope. Nothing renews automatically, and retainer terms are agreed in writing.",
+  "foundingNote": "Founding client pricing: the price shown is held for your first 3 months in exchange for a written or video testimonial after delivery. I only publish a testimonial or case study with your written approval of the final wording. The standard monthly rate applies to clients after the founding period.",
+  "retainerDiscount": "A 10% discount on the monthly rate applies if you commit to a 3-month or 6-month retainer in advance.",
+  "clockStart": "Delivery times are counted in business days from the day I have both your payment (or deposit) and your completed intake form.",
+  "intakeNote": "The intake covers your voice and tone, your top three specialties, and who you want to reach. Please do not send patient or client names, records or photos.",
   "packages": [
     {
       "id": "essential",
-      "name": "Essential Content",
+      "name": "Essential Brand",
       "purpose": "A straightforward way for a busy professional to publish useful content consistently.",
-      "price": null,
-      "paymentLink": null,
-      "delivery": null,
+      "price": "$600",
+      "standardRate": "$950",
+      "delivery": "7 business days",
+      "payment": "100% upfront, invoiced in US dollars by PayPal.",
       "included": [
-        "8 short-form posts (LinkedIn or practice/agent social), about 120 to 220 words each",
-        "One agreed audience and one primary platform",
+        "8 short-form posts (LinkedIn or one agreed platform), about 120 to 220 words each",
+        "Asynchronous intake and voice form, with no call required",
         "A headline or opening hook, and a clear call to action where relevant, for every post",
         "One consistent tone of voice, agreed at the start",
-        "Written intake form plus your notes, voice notes or existing material",
         "One revision round",
         "Editable files (Google Doc or Word)"
       ],
       "details": {
         "Research": "Light fact-checking against sources you supply or point me to. No original market or clinical research.",
-        "Interviews and briefings": "Written intake and voice notes. A live interview is not included.",
+        "Interviews and briefings": "Written intake and voice form only. A live call is not included.",
         "Images and graphics": "Not included.",
         "Publishing and scheduling": "Not included. You publish the posts yourself.",
         "Revisions": "One round, requested within 7 days of delivery."
@@ -37,28 +39,29 @@
     },
     {
       "id": "authority",
-      "name": "Authority Content",
+      "name": "Authority Growth",
       "purpose": "A stronger, more recognizable body of expertise-led content with a consistent editorial direction.",
-      "price": null,
-      "paymentLink": null,
-      "delivery": null,
+      "price": "$1,250",
+      "standardRate": "$1,800",
+      "delivery": "10 business days",
+      "payment": "50% upfront and 50% on delivery, invoiced in US dollars by PayPal.",
       "included": [
-        "12 short-form posts, about 120 to 220 words each",
-        "1 longer piece: an article or email newsletter, 700 to 1,000 words",
+        "12 LinkedIn posts, about 120 to 220 words each",
+        "1 long-form piece (article or newsletter), 700 to 1,000 words",
+        "A 30-minute onboarding and voice call",
         "3 to 4 content themes with a stated purpose for each piece",
         "Headlines, hooks and a clear call to action where relevant for every piece",
-        "A 20 to 30 minute briefing call or voice-note briefing",
         "One revision round",
         "Editable files (Google Doc or Word)"
       ],
       "details": {
-        "Research": "Fact-checking against sources you supply or point me to, plus basic public-source checks for the longer piece.",
-        "Interviews and briefings": "One 20 to 30 minute briefing call or voice-note briefing.",
+        "Research": "Fact-checking against sources you supply or point me to, plus basic public-source checks for the long-form piece.",
+        "Interviews and briefings": "One 30-minute onboarding and voice call.",
         "Images and graphics": "Not included.",
         "Publishing and scheduling": "Not included.",
         "Revisions": "One round across the batch, requested within 7 days of delivery."
       },
-      "clientProvides": "A completed intake form, the briefing, and your review of any clinical or market-specific statements.",
+      "clientProvides": "A completed intake form, the onboarding call, and your review of any clinical or market-specific statements.",
       "excluded": [
         "Publishing, scheduling or account management",
         "Graphic design or image sourcing",
@@ -69,33 +72,35 @@
     {
       "id": "thought-leadership",
       "name": "Thought Leadership",
-      "purpose": "Deeper expertise communicated through a planned mix of short and long-form pieces.",
-      "price": null,
-      "paymentLink": null,
-      "delivery": null,
+      "purpose": "Deeper expertise communicated through a planned mix of short and long-form content.",
+      "price": "From $2,500",
+      "standardRate": "from $4,000",
+      "delivery": "15 business days",
+      "payment": "50% upfront and 50% on delivery, invoiced in US dollars by PayPal.",
       "included": [
-        "16 short-form posts, about 120 to 220 words each",
-        "2 longer pieces (articles or newsletters), 900 to 1,200 words each",
-        "A written editorial plan covering themes, audiences and the order of publication",
+        "16 LinkedIn posts, about 120 to 220 words each",
+        "2 long-form pieces (articles or newsletters), 900 to 1,200 words each",
+        "A 90-day content strategy and editorial plan",
+        "A 45-minute strategy call (one during the pilot, then one each month on a retainer)",
         "Consistent tone and messaging across every piece",
-        "A 45 minute briefing interview",
         "One revision round",
         "Editable files (Google Doc or Word)"
       ],
       "details": {
-        "Research": "Fact-checking against supplied sources plus public-source checks for the longer pieces. Claims that cannot be verified are flagged or removed.",
-        "Interviews and briefings": "One 45 minute briefing interview, plus written intake.",
+        "Research": "Fact-checking against supplied sources plus public-source checks for the long-form pieces. Claims that cannot be verified are flagged or removed.",
+        "Interviews and briefings": "A 45-minute strategy call, plus the written intake.",
         "Images and graphics": "Not included.",
         "Publishing and scheduling": "Not included.",
         "Revisions": "One round across the batch, requested within 7 days of delivery."
       },
-      "clientProvides": "A completed intake form, the interview, any data or source material you want used, and your review of any clinical or market-specific statements.",
+      "clientProvides": "A completed intake form, the strategy call, any data or source material you want used, and your review of any clinical or market-specific statements.",
       "excluded": [
         "Publishing, scheduling or account management",
         "Graphic design or image sourcing",
         "Email platform setup or list management",
-        "Ongoing monthly production (this is a one-off project)"
-      ]
+        "Original market data, statistics or clinical research"
+      ],
+      "priceNote": "Larger or customised scopes are quoted separately in your written scope."
     }
   ]
 }

@@ -28,15 +28,28 @@
 </div></header>
 <main id="main">
 
-<section class="hero"><div class="wrap narrow"><p class="eyebrow">Contact</p><h1>Tell me what you need.</h1>
-<p class="lede">Send me a short message and I will reply by email. There is no obligation, and no payment is taken here.</p>
+<section class="hero"><div class="wrap narrow"><p class="eyebrow">Contact</p><h1>Let&rsquo;s Talk About Your Business</h1>
+<p class="lede">Whether you need help communicating your expertise, improving your website content or developing a stronger online presence, we&rsquo;d like to hear from you.</p>
+<p>Please tell us a little about what you&rsquo;re looking for so we can direct your enquiry appropriately. No payment is taken here.</p>
 <form id="enquiry-form" class="enquiry" name="enquiry" method="POST" action="/thank-you" data-netlify="true" data-netlify-honeypot="bot-field">
   <input type="hidden" name="form-name" value="enquiry">
+  <input type="hidden" name="subject" value="[ENQUIRY] New website enquiry">
+  <input type="hidden" name="classification" value="">
+  <input type="hidden" name="form_opened" value="">
   <p class="hp"><label>Do not fill this out <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-  <div><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
-  <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-  <div><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
-  <p class="small">I use your details only to reply to this enquiry. I will not add you to a marketing list unless you ask me to. See the <a href="/privacy.html">privacy policy</a>.</p>
+  <div><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required minlength="2" maxlength="100"></div>
+  <div><label for="email">Your business email</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="150"></div>
+  <div><label for="website">Business or website <span class="hint">(optional)</span></label><input id="website" name="website" autocomplete="url" maxlength="200" placeholder="yourpractice.com"></div>
+  <div><label for="topic">What would you like to discuss?</label><select id="topic" name="topic" required><option value="">Choose one</option><option value="website-content">Website content and copywriting</option><option value="articles">Articles and blog content</option><option value="strategy">Content strategy and ongoing writing support</option><option value="audit">Content audit and website content improvements</option><option value="staging">Virtual staging</option><option value="general">General business enquiry</option><option value="other">Something else</option></select></div>
+  <fieldset class="choices"><legend>What best describes your enquiry?</legend>
+    <label class="choice"><input type="radio" name="enquiry_type" value="PROSPECT" required> I&rsquo;m interested in hiring Ryno Croft Digital Studio.</label>
+    <label class="choice"><input type="radio" name="enquiry_type" value="INFORMATION"> I&rsquo;m exploring services and would like more information.</label>
+    <label class="choice"><input type="radio" name="enquiry_type" value="PARTNERSHIP"> I&rsquo;m contacting you regarding a business partnership.</label>
+    <label class="choice"><input type="radio" name="enquiry_type" value="SUPPLIER"> I&rsquo;m a supplier or service provider introducing my services.</label>
+    <label class="choice"><input type="radio" name="enquiry_type" value="OTHER"> Other.</label>
+  </fieldset>
+  <div><label for="message">Tell us a little more</label><textarea id="message" name="message" required minlength="30" maxlength="4000" placeholder="Briefly describe your business, what you need help with and what you&rsquo;d like to achieve."></textarea></div>
+  <p class="small">We use your details only to reply to this enquiry. We will not add you to a marketing list unless you ask us to. See the <a href="/privacy.html">privacy policy</a>.</p>
   <div id="form-ok" class="msg ok" role="status"></div>
   <div id="form-err" class="msg err" role="alert" tabindex="-1">Something went wrong and your message may not have been sent. Please try again, or email <a href="mailto:hello@rynocroft.com">hello@rynocroft.com</a>.</div>
   <div><button class="btn" type="submit">Send enquiry</button></div>
