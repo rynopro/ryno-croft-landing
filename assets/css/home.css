@@ -39,3 +39,31 @@ section[id]{scroll-margin-top:84px}
 
 /* footer tweaks */
 footer.site .mail{color:#fff}
+
+/* ---- repositioning additions ---- */
+.svc-grid.three{grid-template-columns:repeat(3,1fr)}
+@media(max-width:1020px){.svc-grid.three{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.svc-grid.three{grid-template-columns:1fr}}
+.svc-no{font:600 .7rem var(--sans);letter-spacing:.14em;color:var(--muted);margin:0 0 .3rem}
+.svc-list{margin:.2rem 0 1rem;padding-left:1.1rem;font-size:.93rem;line-height:1.55}
+.svc-list li{margin:.2rem 0}
+.hh .btns{justify-content:center;margin-top:1.6rem}
+.addl{padding:56px 0}
+.addl .box{display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px 26px;max-width:880px;margin:0 auto}
+.addl h2{font-size:1.5rem;text-align:center;margin-bottom:.3rem}
+.addl .sub{text-align:center;color:var(--muted);margin-bottom:1.4rem}
+.addl .box h3{font-size:1.1rem;margin:0 0 .25rem}
+.addl .box p{margin:0;font-size:.93rem;color:var(--muted)}
+/* dropdown */
+nav.main .has-dd{position:relative}
+nav.main .dd-btn{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:.5rem .2rem;display:inline-flex;gap:.35rem;align-items:center}
+nav.main .dd-btn::after{content:"";border:4px solid transparent;border-top-color:currentColor;margin-top:4px}
+nav.main .dd-menu{display:none;list-style:none;margin:0;padding:.4rem;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(10,17,40,.12);min-width:15rem;z-index:50}
+nav.main .has-dd.open .dd-menu{display:block}
+nav.main .dd-menu a{display:block;padding:.6rem .8rem;border-radius:8px;white-space:nowrap}
+nav.main .dd-menu a:hover,nav.main .dd-menu a:focus{background:var(--paper)}
+@media(min-width:901px){
+  nav.main .dd-menu{position:absolute;right:0;top:100%}
+  nav.main .has-dd:hover .dd-menu{display:block}
+}
+@media(max-width:900px){nav.main .dd-menu{position:static;box-shadow:none;border:0;padding:0 0 0 1rem}}
