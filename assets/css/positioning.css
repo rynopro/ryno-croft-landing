@@ -1,0 +1,18 @@
+/* Positioning refresh. Loaded after site.css and home.css. */
+.fine{font-size:.85rem;color:var(--muted);margin:.2rem 0 1rem}
+.thesis{padding:48px 0 24px;text-align:center}
+.thesis .narrow{margin:0 auto}
+.thesis h2{font-size:clamp(1.6rem,3.2vw,2.3rem)}
+.services-h{text-align:center;font-size:clamp(1.5rem,3vw,2.1rem);margin:0 0 1.6rem}
+.svc-list li{margin:.25rem 0}
+.proof{padding:72px 0}
+.proof h2{text-align:center}
+.proof .sub{text-align:center;color:var(--muted);margin:0 auto 1.8rem;max-width:40rem}
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:980px;margin:0 auto}
+@media(max-width:760px){.proof-grid{grid-template-columns:1fr}}
+.proof-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.proof-card.polished{border:2px solid var(--ink)}
+.proof-tag{font:600 .7rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-text);margin:0 0 .8rem}
+.proof-card blockquote{margin:0;font-style:italic;line-height:1.6;color:var(--muted)}
+.proof-card.polished p{margin:.5rem 0}
+.btn.ghost.light{color:#fff;border-color:rgba(255,255,255,.6)}

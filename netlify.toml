@@ -223,3 +223,119 @@
   to = "/stageready/"
   status = 301
   force = true
+
+# positioning-refresh redirects: retired offers go to the services section
+[[redirects]]
+  from = "/website-content-pilot"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/website-content-pilot/"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/website-content-pilot/*"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2-hour-content-desk"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2-hour-content-desk/"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/2-hour-content-desk/*"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/email-marketing"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/email-marketing.html"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services.html"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dental-content"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dental-content.html"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/luxury-real-estate-content"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/luxury-real-estate-content.html"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/insights"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/insights.html"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/insights/turn-a-patient-question-into-content"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/insights/beyond-the-listing-post"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/insights/what-expertise-led-content-means"
+  to = "/#services"
+  status = 301
+  force = true
+
